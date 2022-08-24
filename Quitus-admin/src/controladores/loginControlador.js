@@ -10,3 +10,20 @@ usuarioctl.login = passport.authenticate('local.signin', {
     failureRedirect:'/login',
     failureFlash: true
 })
+
+usuarioctl.mostrarRegistro = (req, res) =>{
+    res.render('usuario/registro');
+}
+
+usuarioctl.login = passport.authenticate('local.signin', {
+    successRedirect:'/CerrarSecion', 
+    failureRedirect:'/registro',
+    failureFlash: true
+})
+
+usuarioctl.cerrar = (req , res, next)=>{
+    req.logOut();
+    res.redirect('/');
+}
+
+module.exports = usuarioctl
