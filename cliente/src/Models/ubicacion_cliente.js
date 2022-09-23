@@ -5,11 +5,11 @@ const ubicacion_cliente = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         }, 
-        nombreCompleto_cliente: type.STRING,
-
-        //terminar datos
-
-        username_cliente: type.STRING(99),
+        pais_ubicacionCliente:type.STRING,
+        ciudad_ubicacionCliente: type.STRING,
+        /*
+        id_cliente: type.INTEGER,
+        */ 
         creacionUbicacionCliente:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

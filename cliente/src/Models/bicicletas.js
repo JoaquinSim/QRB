@@ -5,11 +5,18 @@ const bicicleta = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         }, 
-        nombreCompleto_cliente: type.STRING,
-
-        //terminar datos
-
-        username_cliente: type.STRING(99),
+        marca_bicicleta:type.STRING,
+        colorPrimario_bicicleta: type.STRING,
+        colorSecundario_bicicleta: type.STRING,
+        descripcion_bicicleta: type.STRING,
+        estado_bicicleta: type.BOOLEAN,
+        imagen_bicicleta: type.TEXT,
+        codigo_bicicleta:type.STRING,
+        /*
+        id_comentario:type.INTEGER,
+        id_rin:type.INTEGER,
+        id_cliente:type.INTEGER,
+        */ 
         creacionBicicleta:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

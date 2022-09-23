@@ -5,11 +5,10 @@ const grupos = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         }, 
-        nombreCompleto_cliente: type.STRING,
-
-        //terminar datos
-
-        username_cliente: type.STRING(99),
+        nombre_grupo:type.STRING,
+        rutas_grupo:type.STRING,
+        descripcion_grupo:type.STRING,
+        foto_grupo:type.TEXT,
         creacionGrupo:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

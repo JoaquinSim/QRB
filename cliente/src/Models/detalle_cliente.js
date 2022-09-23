@@ -5,11 +5,8 @@ const detalle_cliente = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         }, 
-        nombreCompleto_cliente: type.STRING,
-
-        //terminar datos
-
-        username_cliente: type.STRING(99),
+        idCliente_detalleCliente:type.INTEGER,
+        idTipoCiclismo_detalleCliente:type.INTEGER,
         creacionDetalleCliente:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

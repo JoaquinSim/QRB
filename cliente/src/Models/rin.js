@@ -5,11 +5,9 @@ const rin = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         }, 
-        nombreCompleto_cliente: type.STRING,
-
-        //terminar datos
-
-        username_cliente: type.STRING(99),
+        nombre_rin:type.STRING,
+        estado_rin:type.STRING,
+        //idUsuario_rin:type.STRING,
         creacionRin:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

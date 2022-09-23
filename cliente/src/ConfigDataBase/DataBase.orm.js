@@ -13,8 +13,19 @@ mysql.createConnection({
         console.info('Base de datos creada o encontrada')
     })
 })
-
+//Traer los modelos
 const clientesModelo = require('../Models/cliente')
+const ubicacionClientesModelo = require('../Models/ubicacion_cliente')
+const detalleClienteModelo = require('../Models/detalle_cliente')
+const  bicicletaModelo = require('../Models/bicicletas')
+const perdidaRobadaModelo = require('../Models/perdidasRobadas')
+const rinModelo = require('../Models/rin')
+const gruposModelo = require('../Models/gruposCiclismo')
+const detalleGruposModelo = require('../Models/detalleGrupo')
+const tipoCiclismoModelo = require('../Models/tiposCiclismo')
+const comentariosModelo = require('../Models/comentario')
+
+
 
 const sequelize = new Sequelize(
     'qrb',
@@ -44,10 +55,37 @@ sequelize.sync({force: false})
     console.log('Tablas sincronizadas');
 })
 
+
+//Clientes
 const cliente = clientesModelo(sequelize, Sequelize)//sincronia, migracion sin ser migracion
+const ubicacion_cliente = ubicacionClientesModelo(sequelize, Sequelize)
+const detalle_cliente = detalleClienteModelo(sequelize, Sequelize)
+
+//Bicicletas
+const bicicleta = bicicletaModelo(sequelize, Sequelize)
+const perdidaRobada = perdidaRobadaModelo(sequelize, Sequelize)
+const rin = rinModelo(sequelize, Sequelize)
+
+//Grupos
+ const grupos = gruposModelo(sequelize, Sequelize)
+ const detalleGrupos = detalleGruposModelo(sequelize, Sequelize)
+const tiposCiclismo = tipoCiclismoModelo(sequelize, Sequelize)
+
+//Comentarios
+const comentario = comentariosModelo(sequelize, Sequelize) 
+
 
 module.exports = {
-    cliente
+    cliente,
+    ubicacion_cliente,
+    detalle_cliente,
+    bicicleta,
+    perdidaRobada,
+    rin,
+    grupos,
+    detalleGrupos,
+    tiposCiclismo,
+    comentario
 }
 
 

@@ -5,11 +5,7 @@ const comentario = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         }, 
-        nombreCompleto_cliente: type.STRING,
 
-        //terminar datos
-
-        username_cliente: type.STRING(99),
         creacionComentario:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
@@ -25,4 +21,4 @@ const comentario = (sequelize, type)=>{
     })
 }
 
-module.exports = cliente
+module.exports = comentario

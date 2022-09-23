@@ -5,11 +5,9 @@ const tipoCiclismo = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         }, 
-        nombreCompleto_cliente: type.STRING,
-
-        //terminar datos
-
-        username_cliente: type.STRING(99),
+        nombre_tipoCiclismo:type.STRING,
+        estado_tipoCiclismo:type.BOOLEAN,
+        //id_usuario:type.INTEGER,
         creaciontipoCiclismo:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

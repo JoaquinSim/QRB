@@ -5,11 +5,11 @@ const detalleGrupo = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         }, 
-        nombreCompleto_cliente: type.STRING,
-
-        //terminar datos
-
-        username_cliente: type.STRING(99),
+        integrantes_detalleGrupo:type.STRING,
+        /*
+        idGrupo_detalleGrupo:type:STRING,
+        idTipoCiclismo_detalleGrupo:type:STRING,
+        */
         creacionDetalleGrupo:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
