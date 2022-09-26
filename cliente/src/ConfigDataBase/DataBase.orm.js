@@ -74,6 +74,49 @@ const tiposCiclismo = tipoCiclismoModelo(sequelize, Sequelize)
 //Comentarios
 const comentario = comentariosModelo(sequelize, Sequelize) 
 
+//RELACIONES
+//CLIENTE
+//Cliente-ubicacioncliente
+cliente.hasmany(ubicacion_cliente)// hasmany a donde va la relacion
+ubicacion_cliente.belongto(cliente)// belongto de donde viene
+
+//cliente-detalleCliente
+cliente.hasmany(detalle_cliente)
+detalle_cliente.belongto(cliente)
+
+//cliente-bicicleta
+cliente.hasmany(bicicleta)
+bicicleta.belongto(cliente)
+
+//BICICLETA
+//bicicleta-perdidaRobada
+bicicleta.hasmany(perdidaRobada)
+perdidaRobada.belongto(bicicleta)
+
+//bicicleta-rin
+bicicleta.hasmany(rin)
+rin.belongto(bicicleta)
+
+//Grupos-detalleGrupo
+grupos.hasmany(detalleGrupos)
+detalleGrupos.belongto(grupos)
+
+//detalleGrupo-tipoCiclismo
+detalleGrupos.hasmany(tiposCiclismo)
+tiposCiclismo.belongto(detalleGrupos)
+
+//tipoCiclismo-detalleCliente
+tiposCiclismo.hasmany(detalle_cliente)
+detalle_cliente.belongto(tiposCiclismo)
+
+//COMENTARIOS
+//bicleta-comentario
+bicicleta.hasmany(comentario)
+comentario.belongto(bicicleta)
+
+//grupo-comentario
+grupos.hasmany(comentario)
+comentario.belongto(grupos)
 
 module.exports = {
     cliente,

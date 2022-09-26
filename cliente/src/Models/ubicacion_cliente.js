@@ -8,9 +8,6 @@ const ubicacion_cliente = (sequelize, type)=>{
         pais_ubicacionCliente:type.STRING,
         ciudad_ubicacionCliente: type.STRING,
         barrio_cliente:type.STRING,
-        /*
-        id_cliente: type.INTEGER,
-        */ 
         creacionUbicacionCliente:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

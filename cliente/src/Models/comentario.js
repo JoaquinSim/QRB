@@ -5,7 +5,7 @@ const comentario = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         }, 
-
+        comentario_comentario:type.STRING,
         creacionComentario:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

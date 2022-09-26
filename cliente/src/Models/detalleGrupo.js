@@ -6,10 +6,7 @@ const detalleGrupo = (sequelize, type)=>{
             autoIncrement: true
         }, 
         integrantes_detalleGrupo:type.STRING,
-        /*
-        idGrupo_detalleGrupo:type:STRING,
-        idTipoCiclismo_detalleGrupo:type:STRING,
-        */
+
         creacionDetalleGrupo:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

@@ -7,7 +7,6 @@ const tipoCiclismo = (sequelize, type)=>{
         }, 
         nombre_tipoCiclismo:type.STRING,
         estado_tipoCiclismo:type.BOOLEAN,
-        //id_usuario:type.INTEGER,
         creaciontipoCiclismo:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
