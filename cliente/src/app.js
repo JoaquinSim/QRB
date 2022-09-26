@@ -40,7 +40,7 @@ app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json())
 
 app.use(sesion({
-    secret: '',
+    secret: 'Quitus RB',
     resave: false,
     saveUninitialized: false,
     store: new mysqlstore(database)
@@ -60,5 +60,9 @@ app.use((req, res , next) =>{
 })
 
 app.use(express.static(path.join(__dirname, 'public')))
+
+app.use(require('./Rutas/index.rutas'))
+
+app.use(require('./Rutas/login.rutas'))
 
 module.exports = app

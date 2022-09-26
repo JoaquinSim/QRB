@@ -67,8 +67,8 @@ const perdidaRobada = perdidaRobadaModelo(sequelize, Sequelize)
 const rin = rinModelo(sequelize, Sequelize)
 
 //Grupos
- const grupos = gruposModelo(sequelize, Sequelize)
- const detalleGrupos = detalleGruposModelo(sequelize, Sequelize)
+const grupos = gruposModelo(sequelize, Sequelize)
+const detalleGrupos = detalleGruposModelo(sequelize, Sequelize)
 const tiposCiclismo = tipoCiclismoModelo(sequelize, Sequelize)
 
 //Comentarios

@@ -1,5 +1,6 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const CryptoJS = require('crypto-js')
 
 const orm = require('../ConfigDataBase/DataBase.orm')
 const sql = require('../ConfigDataBase/DataBase.sql')
@@ -14,15 +15,13 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const rows = await orm.usuarios.findOne({ where: { username: username } });
+      const rows = await orm.cliente.findOne({ where: { username_cliente: username } });
       if (rows) {
         const user = rows;
-        const validPassword = await helpers.matchPassword(
-          password,
-          user.password
-        );
+        const contraseña = await CryptoJS.AES.decrypt(user.clave_cliente, 'secret');
+        const validPassword = contraseña.toString(CryptoJS.enc.Utf8);
         if (validPassword) {
-          done(null, user, req.flash("message", "Bienvenido" + " " + user.username));
+          done(null, user, req.flash("message", "Bienvenido" + " " + user.username_cliente));
         } else {
           done(null, false, req.flash("message", "Datos incorrecta"));
         }
@@ -46,28 +45,32 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const usuarios = await orm.usuarios.findOne({ where: { username: username } });
+      const usuarios = await orm.cliente.findOne({ where: { username_cliente: username } });
       if (usuarios === null) {
+        const {nombreCompleto_cliente, correo_cliente } = req.body
         let nuevoUsuario = {
-          username,
-          password
+          nombreCompleto_cliente,
+          correo_cliente,
+          username_cliente : username,
+          clave_cliente : password 
         };
-        nuevoUsuario.password = await helpers.encryptPassword(password);
-        const resultado = await orm.usuarios.create(nuevoUsuario);
+        nuevoUsuario.clave_cliente = await helpers.encryptPassword(password);
+        const resultado = await orm.cliente.create(nuevoUsuario);
         nuevoUsuario.id = resultado.insertId;
         return done(null, nuevoUsuario);
       } else {
         if (usuarios) {
           const usuario = usuarios
-          if (username == usuario.username) {
+          if (username == usuario.username_cliente) {
             done(null, false, req.flash("message", "El nombre de usuario ya existe."))
           } else {
+            const {} = req.body
             let nuevoUsuario = {
-              username,
-              password
+              username_cliente : username,
+              clave_cliente : password 
             };
-            nuevoUsuario.password = await helpers.encryptPassword(password);
-            const resultado = await orm.usuarios.create(nuevoUsuario);
+            nuevoUsuario.clave_cliente = await helpers.encryptPassword(password);
+            const resultado = await orm.cliente.create(nuevoUsuario);
             nuevoUsuario.id = resultado.insertId;
             return done(null, nuevoUsuario);
           }
