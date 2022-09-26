@@ -11,7 +11,7 @@ const bicicleta = (sequelize, type)=>{
         descripcion_bicicleta: type.STRING,
         estado_bicicleta: type.STRING,
         imagen_bicicleta: type.STRING,
-        codigo_bicicleta:type.STRING, 
+        codigo_bicicleta: type.STRING, 
         creacionBicicleta:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
