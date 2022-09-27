@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/CSS/grupos.css">
+
+<form action="/grupos/agregar/{{user.id_cliente}}" method="post">
+   <div class="fondo">
+    <div class="contenido contenido--small">
+        <div class="titulo"><b>Nuevo grupo</b></div><br>
+        <div class="conten" id="contenido">
+            <div class="contenido__nombre" id="nombre">
+                <label class="label-nombre">Nombre de grupo</label>
+                <input class="input" type="text" name="nombre_grupo" id="nombre_grupo" checked
+                    aria-checked="true" />
+                    
+            </div>
+            <div id="guardar">
+                <button class="boton" type="submit"><b>Guardar</b></button>
+            </div>
+        </div>
+    </div>
+    </div>
+</form>

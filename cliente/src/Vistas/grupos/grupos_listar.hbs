@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/CSS/grupos.css" />
+<form action="/grupos/listar/{{user.id_cliente}}" method="get"></form>
+<div class="grupo" id="contenedor">
+  <div class="grupo__encabezado">
+    <p class="grupo-titulo">Grupos ciclismo</p>
+    <a href="/grupos/agregar/{{user.id_cliente}}"><button class="grupo-boton"><b
+        >Agregar grupo</b></button></a>
+  </div>
+    <hr>
+  {{#each lista}}
+    <div class="contenedor__contenido">
+      <div class="nombre" id="nombre">
+        <h1>{{nombre_grupo}}</h1>
+      </div>
+      <div id="editar">
+        <a href="/grupos/editar/{{id_grupo}}"><button class="boton"><b
+            >Editar</b></button></a>
+      </div>
+      <div class="grupo" id="grupo">
+      </div>
+    </div>
+
+  {{else}}
+    <div class="contenedorM">
+      <div class="contenedor__mensaje">
+        <p>No existen grupos registrados</p>
+        <p>¿Agregar un nuevo grupo?</p>
+        <a href="/grupos/agregar/{{user.id_cliente}}"><button class="grupo-boton boton"><b
+            >Agregar</b></button></a>
+      </div>
+    </div>
+  {{/each}}
+</div>

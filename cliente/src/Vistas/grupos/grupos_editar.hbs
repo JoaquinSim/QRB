@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/CSS/grupos.css">
+<form action="/grupos/editar/{{user.id_cliente}}" method="post">
+    <div class="fondo">
+        <div class="contenido contenido--small" id="contenido">
+            {{#each lista}}
+            <h1 class="titulo">Editar grupo</h1>
+            <div id="oculto">
+                <input class="input" type="text" name="id_grupo" id="grupo" checked aria-checked="true"
+                    value="{{id_grupo}}" readonly>
+            </div>
+            <div class="nombre-clasificacion" id="nombre_grupo">
+                <label class="label-nombre">Nombre: </label>
+                <input class="input" type="text" name="nombre_grupo" id="nombre" checked aria-checked="true"
+                    value="{{nombre_grupo}}" />
+            </div>
+            {{/each}}
+            <div id="guardar">
+                <button type="submit" class="boton"><b>Guardar</b></button>
+            </div>
+        </div>
+    </div>
+</form>
