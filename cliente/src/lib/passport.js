@@ -64,8 +64,9 @@ passport.use(
           if (username == usuario.username_cliente) {
             done(null, false, req.flash("message", "El nombre de usuario ya existe."))
           } else {
-            const {} = req.body
+            const {nombreCompleto_cliente} = req.body
             let nuevoUsuario = {
+              nombreCompleto_cliente, 
               username_cliente : username,
               clave_cliente : password 
             };
@@ -86,4 +87,4 @@ passport.serializeUser(function (user, done) {
 
 passport.deserializeUser(function (user, done) {
   done(null, user);
-});
+}); 

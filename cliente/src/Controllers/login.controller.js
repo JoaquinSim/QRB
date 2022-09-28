@@ -7,7 +7,7 @@ loginCTL.mostrarLogin = (req, res)=>{
 }
 
 loginCTL.login = passport.authenticate('local.signin', {
-    successRedirect: '/siguiente',
+    successRedirect: '/inicio',
     failureRedirect: '/login',
     failureFlash: true
 })
