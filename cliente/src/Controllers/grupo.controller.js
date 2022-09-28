@@ -10,28 +10,46 @@ grupoCTL.mostrar = (req, res) => {
 //Mostrar el listado de grupos
 grupoCTL.listar = async (req, res) => {
   const lista = await sql.query("select * from grupos");
-  res.render("grupos/grupos_listar", { lista });
+  res.render("grupos/grupos_listar", { lista  });
 };
 
 //agregar nuevos grupos
 grupoCTL.enviar = async (req, res) => {
   const id = req.user.id_cliente
-  const { nombre_grupo } = req.body;
+  const { nombre_grupo, rutas_grupo, descripcion_grupo, foto_grupo, integrantes_detalleGrupo, nombre_tipoCiclismo } = req.body;
   const nuevoGrupo = {
     nombre_grupo,
+    rutas_grupo,
+    descripcion_grupo,
+    foto_grupo,
+    integrantes_detalleGrupo,
+    nombre_tipoCiclismo,
     id_cliente: id
   };
-  await orm.grupos.create(nuevoGrupo).then(() => {
+  const nuevoDetalleGrupo = {
+    integrantes_detalleGrupo, 
+    id_cliente: id
+  };
+  const nuevoTipoCiclismo = {
+    nombre_tipoCiclismo,
+    id_cliente: id
+  };
+  await orm.grupos,orm.detalleGrupos,orm.tiposCiclismo.create(nuevoGrupo ,nuevoDetalleGrupo, nuevoTipoCiclismo).then(() => {
     req.flash("success", "Exito al guardar");
     res.redirect("/grupos/listar/" + id);
   });
+
 };
+
 grupoCTL.traer = async (req, res) => {
     const id = req.params.id;
     const lista = await sql.query("select * from grupos where id_grupo=?", [
       id,
     ]);
-    res.render("grupos/grupos_editar", { lista });
+    const listaDetalleGrupo = await sql.query("select * from detalleGrupos where id_detalleGrupo=?", [
+      id,
+    ]);
+    res.render("grupos/grupos_editar", { lista, listaDetalleGrupo });
 };
 
 

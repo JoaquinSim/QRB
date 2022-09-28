@@ -1,22 +1,107 @@
-<link rel="stylesheet" href="/CSS/grupos.css">
-<form action="/grupos/editar/{{user.id_cliente}}" method="post">
-    <div class="fondo">
-        <div class="contenido contenido--small" id="contenido">
-            {{#each lista}}
-            <h1 class="titulo">Editar grupo</h1>
-            <div id="oculto">
-                <input class="input" type="text" name="id_grupo" id="grupo" checked aria-checked="true"
-                    value="{{id_grupo}}" readonly>
-            </div>
-            <div class="nombre-clasificacion" id="nombre_grupo">
-                <label class="label-nombre">Nombre: </label>
-                <input class="input" type="text" name="nombre_grupo" id="nombre" checked aria-checked="true"
-                    value="{{nombre_grupo}}" />
-            </div>
-            {{/each}}
-            <div id="guardar">
-                <button type="submit" class="boton"><b>Guardar</b></button>
-            </div>
+<link rel="stylesheet" href="/CSS/grupos.css" />
+<form class="agregar" action="/grupos/editar/{{user.id_cliente}}" method="post">
+  <div class="contenedor-agregar">
+    <div class="contenedor-agregar" id="contenido">
+      {{#each lista}}
+        <div class="titulo-agregar"> <h1 class="">Editar grupo</h1></div>
+        <div id="oculto">
+          <input
+            class=""
+            type="text"
+            name="id_grupo"
+            id="grupo"
+            checked
+            aria-checked="true"
+            value="{{id_grupo}}"
+            readonly
+          />
         </div>
+        <div class="inputs">
+          <div class="input" id="nombre_grupo">
+            <label class="label-nombre">Nombre grupo: </label>
+            <input
+              class="input"
+              type="text"
+              name="nombre_grupo"
+              id="nombre"
+              checked
+              aria-checked="true"
+              value="{{nombre_grupo}}"
+            />
+          </div>
+          <div class="input" id="nombre_grupo">
+            <label class="label-nombre">Integrantes: </label>
+            <input
+              class="input"
+              type="text"
+              name="nombre_grupo"
+              id="nombre"
+              checked
+              aria-checked="true"
+              value="{{integrantes_detalleGrupo}}"
+            />
+          </div>
+          <div class="input" id="rutas_grupo">
+            <label class="label-nombre">Rutas Grupo: </label>
+            <input
+              class="input"
+              type="text"
+              name="nombre_grupo"
+              id="nombre"
+              checked
+              aria-checked="true"
+              value="{{rutas_grupo}}"
+            />
+          </div>
+          <div class="input" id="rutas_grupo">
+            <label class="label-nombre">Tipo ciclismo: </label>
+            <input
+              class="input"
+              type="text"
+              name="nombre_grupo"
+              id="nombre"
+              checked
+              aria-checked="true"
+              value="{{nombre_tipoCiclismo}}"
+            />
+          </div>
+          <div class="input" id="descripcion_grupo">
+            <label class="label-nombre">Descripcion Grupo: </label>
+            <input
+              class="input"
+              type="text"
+              name="nombre_grupo"
+              id="nombre"
+              checked
+              aria-checked="true"
+              value="{{descripcion_grupo}}"
+            />
+          </div>
+          <div class="contenedor-imagen" id="foto_grupo">
+            <label class="label-nombre">Foto: </label>
+            <input
+              class="input"
+              type="text"
+              name="nombre_grupo"
+              id="nombre"
+              checked
+              aria-checked="true"
+              value="{{foto_grupo}}"
+            />
+          </div>
+        </div>
+      {{/each}}
+      <div class="group-botones">
+        <div id="guardar">
+          <button type="submit" class="boton"><b>Guardar</b></button>
+        </div>
+        <div id="guardar">
+          <button class="boton"><b>Eliminar</b></button>
+        </div>
+        <div>
+          <a href="/grupos/listar/{{user.id_cliente}}">Regresar</a>
+        </div>
+      </div>
     </div>
+  </div>
 </form>

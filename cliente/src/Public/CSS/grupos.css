@@ -2,13 +2,16 @@
     margin: 0;
     padding: 0;
 }
+#oculto{
+    display: none;
+}
 body{
     background-image: url('/IMG/fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 .grupo{
-    height: 90vh;
+    height: 100vh;
 }
 .grupo__encabezado{
     margin: 20px;
@@ -51,7 +54,53 @@ body{
     margin-top: 10px;
     border: 2px solid white;
 }
+/*Agregar*/
+.agregar{
+    display:flex;
+    justify-content: center;
+    height: 90%;
+    align-items: center;
+}
+.titulo-agregar{
+    border: 2px solid black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
 .grupo-boton:hover{
     cursor: pointer;
     transform: scale(1.1);
+}
+.contenedor-agregar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(33, 33, 33, 0.9);
+    color: white;
+    width: 95%;
+    height: 700px;
+}
+.grupo-listar{
+    display:flex;
+    justify-content: center;
+}
+.lista-grupo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    border: 5px solid black;
+    width: 450px;
+    height: 200px;
 }
