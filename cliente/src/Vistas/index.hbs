@@ -10,7 +10,7 @@
       <li>
         <div class="header-contenedor__logo">
           <div class="slide-logo">
-            <img class="slide" src="/IMG/cerrarmenu.png" alt="cerrarmenu" onclick="cerrarSlide()" />
+            <img class="slideN" src="/IMG/cerrarmenu.png" alt="cerrarmenu" onclick="cerrarSlide()" />
             <img class="logo" src="/IMG/logoQuitus.jpeg" alt="" />
           </div>
         </div>
@@ -43,20 +43,69 @@
   </header>
 
   <!--SECCION PRINCIPAL-->
-  <main class="main" id="main">
-    <section id="" class="presentacion">
-      <div id="" class="presentacion__texto">
-        <h5>¿Qué es Quitus-RideBike?</h5>
-        <p>Quitus-RideBike es un proyecto enfocado en la ayuda a la comunidad ciclista del Distrito Metropolitano de
-          Quito, dándoles un espacio donde puedan hacer eco de problemas como robos de bicicletas. Así mismo, ayudando a
-          la comunidad sobre lugares seguros dentro de Quito para realizar ciclismo amateur y, que puedan conocer grupos
-          que incentivan esta actividad, entre otros mas servicios a la comunidad.</p>
-      </div>
-      <div id="" class="presentacion__imagen">
-        <img src="/IMG/Quitus1.1.jpeg" alt="">
-      </div>
-    </section>
-  </main>
+  <!-- carrusel de imagenes-->
+    <div class="container-all">
+
+        <input type="radio" id="1" name="image-slide" hidden/>
+        <input type="radio" id="2" name="image-slide" hidden/>
+        <input type="radio" id="3" name="image-slide" hidden/>
+
+        <div class="slide-n">
+
+            <div class="item-slide">
+                <img src="img/img1.jpeg">
+            </div>
+
+            <div class="item-slide">
+                <img src="img/img4.png">
+            </div>
+
+            <div class="item-slide">
+                <img src="img/img3.png">
+            </div>
+        </div>
+        <div class="pagination">
+
+            <label class="pagination-item" for="1">
+                <img src="img/img1.jpeg">
+            </label>
+
+            <label class="pagination-item" for="2">
+                <img src="img/img4.png">
+            </label>
+
+            <label class="pagination-item" for="3">
+                <img src="img/img3.png">
+            </label>
+
+        </div>
+
+    </div>
+<!-- redes sociales -->
+    <div class="sticky-container ">
+        <ul class="sticky ">
+            <li>
+                <img src="/img/facebook.png " width="32 " height="32 ">
+                <p>
+                    <a href=" " target="_blank ">Síguenos en<br>Facebook</a>
+                </p>
+            </li>
+            <li>
+                <img src="/img/whatsapp.png " width="32 " height="32 ">
+                <p><a href=" " target="_blank ">Escríbenos a<br>Whatsapp</a></p>
+            </li>
+            <li>
+                <img src="/img/instagram.png " width="32 " height="32 ">
+                <p><a href=" " target="_blank ">Síguenos en<br>Instagram</a></p>
+            </li>
+
+            <li>
+                <img src="/img/google.png " width="32 " height="32 ">
+                <p><a href=" " target="_blank ">Escríbenos a nuestro <br>Correo</a></p>
+            </li>
+
+        </ul>
+    </div>
 
   <!--FOOTER-->
   <footer class="footer">
