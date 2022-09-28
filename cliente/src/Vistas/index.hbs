@@ -1,36 +1,66 @@
-<link rel="stylesheet" href="../../CSS/index.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/CSS/index.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet" />
+
 <body>
-<div id="contenedor">
-  <div id="header">
-    <div id="header__menu">
-      <div class="menu__item logo">
-        <img src="IMG/LogoQuitus.jpeg" alt="" />
+  <!--HEADER-->
+  <nav class="slidebar" id="slide">
+    <ul>
+      <li>
+        <div class="header-contenedor__logo">
+          <div class="slide-logo">
+            <img class="slide" src="/IMG/cerrarmenu.png" alt="cerrarmenu" onclick="cerrarSlide()" />
+            <img class="logo" src="/IMG/logoQuitus.jpeg" alt="" />
+          </div>
+        </div>
+        <hr style="background-color: white;">
+      </li>
+      <li class="nav-list"><a href="">Bicicletas</a></li>
+      <li class="nav-list"><a href="">Grupos de ciclismo</a></li>
+      <li class="nav-list"><a href="#">Consejos ciclistas</a></li>
+    </ul>
+  </nav>
+  <header class="header" id="header">
+    <img class="slide" src="/IMG/menu.png" alt="" id="slidemenu" onclick="desplegarSlide()" />
+    <div class="header-contenedor" id="header-contenedor">
+      <div class="header-contenedor__titulo">
+       <a href="/"> QUITUS RIDE-BIKE</a>
       </div>
-      <div class="menu__item titulo">
-        Quitus Ride-Bike
+      <div class="header-contenedor__menu">
+        <img class="menu" src="/IMG/usuario.png" alt="" onclick="desplegarMenu()" />
       </div>
-      <div class="menu__item menu__sesion">
-        <img class="sesion" src="/IMG/usuario.png" alt="">
+      <div class="header__menu" id="header-menu">
         <ul>
-          <li><a href="/login">Iniciar sesion</a></li>
+          <li><img class="slide slide--menu" src="/IMG/cerrarmenu.png" alt="" onclick="cerrarMenu()"></li>
+          <li><a href="/login">Iniciar Sesion</a></li>
           <li><a href="/registro">Registrate</a></li>
         </ul>
       </div>
 
     </div>
-  </div>
-  <div id="main">
-    <div id="sectionImage">
-      <img src="/IMG/LogoQuitus.jpeg" alt="">
     </div>
-  </div>
-  <div id="footer">
-    <div id="footer__content">
-      <p>footer</p>
-    </div>
-  </div>
-</div>
+  </header>
+
+  <!--SECCION PRINCIPAL-->
+  <main class="main" id="main">
+    <section id="" class="presentacion">
+      <div id="" class="presentacion__texto">
+        <h5>¿Qué es Quitus-RideBike?</h5>
+        <p>Quitus-RideBike es un proyecto enfocado en la ayuda a la comunidad ciclista del Distrito Metropolitano de
+          Quito, dándoles un espacio donde puedan hacer eco de problemas como robos de bicicletas. Así mismo, ayudando a
+          la comunidad sobre lugares seguros dentro de Quito para realizar ciclismo amateur y, que puedan conocer grupos
+          que incentivan esta actividad, entre otros mas servicios a la comunidad.</p>
+      </div>
+      <div id="" class="presentacion__imagen">
+        <img src="/IMG/Quitus1.1.jpeg" alt="">
+      </div>
+    </section>
+  </main>
+
+  <!--FOOTER-->
+  <footer class="footer">
+
+  </footer>
 </body>
+<script src="/JS/index.js"></script>
