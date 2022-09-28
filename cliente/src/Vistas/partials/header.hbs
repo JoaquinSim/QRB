@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/CSS/header.css" />
+{{#if user}}
+ <!--HEADER-->
+  <nav class="slidebar" id="slide">
+    <ul>
+      <li>
+        <div class="header-contenedor__logo">
+          <div class="slide-logo">
+            <img class="slide" src="/IMG/cerrarmenu.png" alt="cerrarmenu" onclick="cerrarSlide()" />
+            <img class="logo" src="/IMG/logoQuitus.jpeg" alt="" />
+          </div>
+        </div>
+        <hr style="background-color: white;">
+      </li>
+      <li class="nav-list"><a href="#">Bicicletas</a></li>
+      <li class="nav-list"><a href="/grupos/listar/{{user.id_cliente}}">Grupos de ciclismo</a></li>
+      <li class="nav-list"><a href="#">Consejos ciclistas</a></li>
+    </ul>
+  </nav>
+  <header class="header" id="header">
+    <img class="slide" src="/IMG/menu.png" alt="" id="slidemenu" onclick="desplegarSlide()" />
+    <div class="header-contenedor" id="header-contenedor">
+      <div class="header-contenedor__titulo">
+        <h6><a href="/inicio"> QUITUS RIDE-BIKE</a></h6>
+      </div>
+      <div class="header-contenedor__menu">
+        <img class="menu" src="/IMG/usuario.png" alt="" onclick="desplegarMenu()" />
+      </div>
+      <div class="header__menu" id="header-menu">
+        <ul>
+          <li><img class="slide slide--menu" src="/IMG/cerrarmenu.png" alt="" onclick="cerrarMenu()"></li>
+          <li><a href="#">Perfil</a></li>
+          <li><a href="/cerrarsesion">Cerrar Sesion</a></li>
+        </ul>
+      </div>
+
+    </div>
+    </div>
+  </header>
+{{/if}}
