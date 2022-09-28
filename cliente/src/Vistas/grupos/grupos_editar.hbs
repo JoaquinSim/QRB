@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="/CSS/grupos.css" />
+<form
+  class="form-agregar"
+  action="/grupos/editar/{{user.id_cliente}}"
+  method="post"
+  id="main"
+>
+  <div class="contenedor-agregar">
+    <div class="titulo-agregar"> <h1 class="">Editar grupo</h1></div>
+    <div class="contenedor-agregar__contenido" id="contenido">
+      {{#each lista}}
+        <div id="oculto">
+          <input
+            class=""
+            type="text"
+            name="id_grupo"
+            id="grupo"
+            checked
+            aria-checked="true"
+            value="{{id_grupo}}"
+            readonly
+          />
+        </div>
+        <div class="texto-agregar" id="contenido">
+          <div class="input-agregar" id="nombre">
+            <input
+              class="input"
+              type="text"
+              name="nombre_grupo"
+              id="nombre_grupo"
+              checked
+              aria-checked="true"
+              placeholder="Inserte el nombre del grupo"
+              value="{{nombre_grupo}}"
+            />
+          </div>
+          <div class="input-agregar" id="integrantes">
+            <input
+              class="input"
+              type="text"
+              name="integrantes_detalleGrupo"
+              id="nombre_grupo"
+              checked
+              aria-checked="true"
+              placeholder="Inserte los integrantes del grupo"
+              value="{{integrentes_detalleGrupo}}"
+            />
+          </div>
+          <div class="input-agregar" id="rutas">
+            <input
+              class="input"
+              type="text"
+              name="rutas_grupo"
+              id="nombre_grupo"
+              checked
+              aria-checked="true"
+              placeholder="Inserte las rutas del grupo"
+              value="{{rutas_grupo}}"
+            />
+          </div>
+          <div class="input-agregar" id="tipoCiclismo">
+            <input
+              type="text"
+              name="nombre_tipoCiclismo"
+              class="input"
+              placeholder="Inserte el tipo de ciclismo del grupo"
+              value="{{nombre_tipoCiclimo}}"
+            />
+          </div>
+          <div class="input-agregar" id="descripcion">
+            <input
+              name="descripcion_grupo"
+              class="input input--area"
+              placeholder="Inserte la descripcion del grupo"
+              value="{{descripcion_grupo}}"
+            />
+          </div>
+        </div>
+        <div class="contenedor-imagen">
+          <div class="imagen">
+            <input type="text" name="foto_grupo" id="" value="{{foto_grupo}}" />
+          </div>
+          <div class="botones">
+            <div id="guardar">
+              <button type="submit" class="grupo-boton"><b>Guardar</b></button>
+            </div><!--
+            <div>
+              <a href="/grupos/listar/{{user.id_grupo}}">Regresar</a>
+            </div>
+            <div id="">
+              <button class="grupo-boton"><b>Eliminar</b></button>
+            </div>-->
+          </div>
+
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</form>

@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="/CSS/grupos.css" />
+
+<form
+  class="form-agregar"
+  action="/grupos/agregar/{{user.id_cliente}}"
+  method="post"
+  id="main"
+>
+  <div class="contenedor-agregar">
+    <div class="titulo-agregar"><b>Nuevo grupo</b></div>
+    <div class="contenedor-agregar__contenido">
+      <div class="texto-agregar" id="contenido">
+        <div class="input-agregar" id="nombre">
+          <input
+            class="input"
+            type="text"
+            name="nombre_grupo"
+            id="nombre_grupo"
+            checked
+            aria-checked="true"
+            placeholder="Inserte el nombre del grupo"
+          />
+        </div>
+        <div class="input-agregar" id="integrantes">
+          <input
+            class="input"
+            type="text"
+            name="integrantes_detalleGrupo"
+            id="nombre_grupo"
+            checked
+            aria-checked="true"
+            placeholder="Inserte los integrantes del grupo"
+          />
+        </div>
+        <div class="input-agregar" id="rutas">
+          <input
+            class="input"
+            type="text"
+            name="rutas_grupo"
+            id="nombre_grupo"
+            checked
+            aria-checked="true"
+            placeholder="Inserte las rutas del grupo"
+          />
+        </div>
+        <div class="input-agregar" id="tipoCiclismo">
+          <input
+            type="text"
+            name="nombre_tipoCiclismo"
+            class="input"
+            placeholder="Inserte el tipo de ciclismo del grupo"
+          />
+        </div>
+        <div class="input-agregar" id="descripcion">
+          <textarea
+            name="descripcion_grupo"
+            class="input input--area"
+            placeholder="Inserte la descripcion del grupo"
+          ></textarea>
+        </div>
+      </div>
+      <div class="contenedor-imagen">
+        <div class="imagen">
+          <input type="file" name="foto_grupo" id="" />
+        </div>
+        <div class="botones">
+          <div id="guardar">
+            <button class="grupo-boton" type="submit"><b>Guardar</b></button>
+          </div>
+          <div>
+            <a href="/grupos/listar/{{user.id_cliente}}">Regresar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</form>
