@@ -34,11 +34,17 @@ grupoCTL.enviar = async (req, res) => {
     nombre_tipoCiclismo,
     id_cliente: id
   };
-  await orm.grupos,orm.detalleGrupos,orm.tiposCiclismo.create(nuevoGrupo ,nuevoDetalleGrupo, nuevoTipoCiclismo).then(() => {
+  await orm.grupos.create(nuevoGrupo).then(() => {
     req.flash("success", "Exito al guardar");
-    res.redirect("/grupos/listar/" + id);
   });
+  await orm.detalleGrupos.create(nuevoDetalleGrupo).then(() => {
+    req.flash("success", "Exito al guardar");
 
+  });
+  await orm.tiposCiclismo.create(nuevoTipoCiclismo).then(() => {
+    req.flash("success", "Exito al guardar");
+    res.redirect('/grupos/listar/'+ id);
+  });
 };
 
 grupoCTL.traer = async (req, res) => {

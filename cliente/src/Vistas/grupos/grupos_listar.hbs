@@ -1,38 +1,36 @@
 <link rel="stylesheet" href="/CSS/grupos.css" />
-<form action="/grupos/listar/{{user.id_cliente}}" method="get"></form>
-<div class="grupo" id="contenedor">
+<form action="/grupos/listar/{{user.id_cliente}}" method="get" ></form>
+
+<div class="contenedor-grupos">
   <div class="grupo__encabezado">
-    <p class="grupo-titulo">Grupos ciclismo</p>
-    <a href="/grupos/agregar/{{user.id_cliente}}"><button class="grupo-boton"><b
-        >Agregar grupo</b></button></a>
+    <div class="encabezado">
+      <h6 class="grupo-titulo">Grupos ciclismo</h6>
+      <a href="/grupos/agregar/{{user.id_cliente}}"><button class="grupo-boton"><b>Agregar grupo</b></button></a>
+    </div>
   </div>
-  <hr />
+  <hr>
+</div>
+<form class="grupo-listar">
   {{#each lista}}
-    <div class="grupo-listar">
+  <a href="/grupos/editar/{{id_grupo}}">
+    <div class="contenedor-lista">
       <div class="lista-grupo">
-        <div class="foto" id="nombre">
-          <p src="" alt="" value="">{{foto_grupo}}</p>
+        <div class="imagenrec" id="nombre">
+          <p>{{foto_grupo}}</p>
         </div>
-        <div class="nombre" id="nombre">
+        <div class="imagenrec" id="nombre">
           <p>{{nombre_grupo}}</p>
         </div>
-        <div id="editar">
-          <a href="/grupos/editar/{{id_grupo}}"><button
-              class="grupo-boton boton"
-            ><b>Editar</b></button></a>
-        </div>
       </div>
     </div>
-
+  </a>
   {{else}}
-    <div class="contenedorM">
-      <div class="contenedor__mensaje">
-        <p>No existen grupos registrados</p>
-        <p>¿Agregar un nuevo grupo?</p>
-        <a href="/grupos/agregar/{{user.id_cliente}}"><button
-            class="grupo-boton boton"
-          ><b>Agregar</b></button></a>
-      </div>
-    </div>
-  {{/each}}
 </div>
+<div class="contenedorM">
+  <div class="contenedor__mensaje">
+    <p>No existen grupos registrados</p>
+    <p>¿Agregar un nuevo grupo?</p>
+    <a href="/grupos/agregar/{{user.id_cliente}}"><button class="grupo-boton boton"><b>Agregar</b></button></a>
+  </div>
+</div>
+{{/each}}

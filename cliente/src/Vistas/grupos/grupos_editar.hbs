@@ -1,9 +1,14 @@
 <link rel="stylesheet" href="/CSS/grupos.css" />
-<form class="agregar" action="/grupos/editar/{{user.id_cliente}}" method="post">
+<form
+  class="form-agregar"
+  action="/grupos/editar/{{user.id_cliente}}"
+  method="post"
+  id="main"
+>
   <div class="contenedor-agregar">
-    <div class="contenedor-agregar" id="contenido">
+    <div class="titulo-agregar"> <h1 class="">Editar grupo</h1></div>
+    <div class="contenedor-agregar__contenido" id="contenido">
       {{#each lista}}
-        <div class="titulo-agregar"> <h1 class="">Editar grupo</h1></div>
         <div id="oculto">
           <input
             class=""
@@ -16,92 +21,79 @@
             readonly
           />
         </div>
-        <div class="inputs">
-          <div class="input" id="nombre_grupo">
-            <label class="label-nombre">Nombre grupo: </label>
+        <div class="texto-agregar" id="contenido">
+          <div class="input-agregar" id="nombre">
             <input
               class="input"
               type="text"
               name="nombre_grupo"
-              id="nombre"
+              id="nombre_grupo"
               checked
               aria-checked="true"
+              placeholder="Inserte el nombre del grupo"
               value="{{nombre_grupo}}"
             />
           </div>
-          <div class="input" id="nombre_grupo">
-            <label class="label-nombre">Integrantes: </label>
+          <div class="input-agregar" id="integrantes">
             <input
               class="input"
               type="text"
-              name="nombre_grupo"
-              id="nombre"
+              name="integrantes_detalleGrupo"
+              id="nombre_grupo"
               checked
               aria-checked="true"
-              value="{{integrantes_detalleGrupo}}"
+              placeholder="Inserte los integrantes del grupo"
+              value="{{integrentes_detalleGrupo}}"
             />
           </div>
-          <div class="input" id="rutas_grupo">
-            <label class="label-nombre">Rutas Grupo: </label>
+          <div class="input-agregar" id="rutas">
             <input
               class="input"
               type="text"
-              name="nombre_grupo"
-              id="nombre"
+              name="rutas_grupo"
+              id="nombre_grupo"
               checked
               aria-checked="true"
+              placeholder="Inserte las rutas del grupo"
               value="{{rutas_grupo}}"
             />
           </div>
-          <div class="input" id="rutas_grupo">
-            <label class="label-nombre">Tipo ciclismo: </label>
+          <div class="input-agregar" id="tipoCiclismo">
             <input
-              class="input"
               type="text"
-              name="nombre_grupo"
-              id="nombre"
-              checked
-              aria-checked="true"
-              value="{{nombre_tipoCiclismo}}"
+              name="nombre_tipoCiclismo"
+              class="input"
+              placeholder="Inserte el tipo de ciclismo del grupo"
+              value="{{nombre_tipoCiclimo}}"
             />
           </div>
-          <div class="input" id="descripcion_grupo">
-            <label class="label-nombre">Descripcion Grupo: </label>
+          <div class="input-agregar" id="descripcion">
             <input
-              class="input"
-              type="text"
-              name="nombre_grupo"
-              id="nombre"
-              checked
-              aria-checked="true"
+              name="descripcion_grupo"
+              class="input input--area"
+              placeholder="Inserte la descripcion del grupo"
               value="{{descripcion_grupo}}"
             />
           </div>
-          <div class="contenedor-imagen" id="foto_grupo">
-            <label class="label-nombre">Foto: </label>
-            <input
-              class="input"
-              type="text"
-              name="nombre_grupo"
-              id="nombre"
-              checked
-              aria-checked="true"
-              value="{{foto_grupo}}"
-            />
+        </div>
+        <div class="contenedor-imagen">
+          <div class="imagen">
+            <input type="text" name="foto_grupo" id="" value="{{foto_grupo}}" />
           </div>
+          <div class="botones">
+            <div id="guardar">
+              <button type="submit" class="grupo-boton"><b>Guardar</b></button>
+            </div><!--
+            <div>
+              <a href="/grupos/listar/{{user.id_grupo}}">Regresar</a>
+            </div>
+            <div id="">
+              <button class="grupo-boton"><b>Eliminar</b></button>
+            </div>-->
+          </div>
+
         </div>
       {{/each}}
-      <div class="group-botones">
-        <div id="guardar">
-          <button type="submit" class="boton"><b>Guardar</b></button>
-        </div>
-        <div id="guardar">
-          <button class="boton"><b>Eliminar</b></button>
-        </div>
-        <div>
-          <a href="/grupos/listar/{{user.id_cliente}}">Regresar</a>
-        </div>
-      </div>
     </div>
   </div>
 </form>
