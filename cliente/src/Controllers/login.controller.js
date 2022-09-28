@@ -1,9 +1,13 @@
 const passport = require("passport")
+const orm = require("../ConfigDataBase/DataBase.orm");
+const sql = require("../ConfigDataBase/DataBase.sql");
 
 const loginCTL = {}
 
-loginCTL.mostrarLogin = (req, res)=>{
-    res.render('registro/login')
+loginCTL.mostrarLogin = async(req, res)=>{
+    const ids = req.params.id
+    const Usuario = await sql.query('select id_cliente, username_cliente from clientes where id_cliente = ?', [ids])
+    res.render('registro/login', {Usuario})
 }
 
 loginCTL.login = passport.authenticate('local.signin', {
@@ -12,8 +16,9 @@ loginCTL.login = passport.authenticate('local.signin', {
     failureFlash: true
 })
 
-loginCTL.mostrarRegistro= (req, res)=>{
-    res.render('registro/registro')
+loginCTL.mostrarRegistro= async (req, res)=>{
+    const cliente = await sql.query('select max(id_cliente) from clientes')
+    res.render('registro/registro',{cliente})
 }
 
 
