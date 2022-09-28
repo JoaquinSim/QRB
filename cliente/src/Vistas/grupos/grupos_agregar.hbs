@@ -5,9 +5,20 @@
   action="/grupos/agregar/{{user.id_cliente}}"
   method="post"
   id="main"
+  ref="uploadForm"
+  encType="multipart/form-data"
 >
   <div class="contenedor-agregar">
-    <div class="titulo-agregar"><b>Nuevo grupo</b></div>
+    <div class="titulo-agregar"><b>Nuevo grupo</b>
+      {{#each max}}
+        <input
+          type="text"
+          name="id_grupo"
+          id="numero"
+          value="{{'max(id_grupo)'}}"
+          readonly
+        />
+      {{/each}}</div>
     <div class="contenedor-agregar__contenido">
       <div class="texto-agregar" id="contenido">
         <div class="input-agregar" id="nombre">
@@ -61,7 +72,7 @@
       </div>
       <div class="contenedor-imagen">
         <div class="imagen">
-          <input type="file" name="foto_grupo" id="" />
+          <input type="file" name="foto_grupo" id="foto_grupo" />
         </div>
         <div class="botones">
           <div id="guardar">

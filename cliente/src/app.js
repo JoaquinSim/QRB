@@ -10,7 +10,6 @@ const bodyparser = require('body-parser');
 const fileUpload = require('express-fileupload');
 
 const {database} = require('./keys');
-const { use } = require('passport');
 
 const app = express()
 require('./lib/passport')
@@ -23,7 +22,7 @@ const handlebars = exphbs.create({
     helpers: require('./lib/helpers')
 })
 
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 4000)
 
 app.set('views', path.join(__dirname, 'Vistas'))
 
@@ -72,5 +71,7 @@ app.use(require('./Rutas/login.rutas'))
 app.use(require('./Rutas/bicicleta.rutas'))
 
 app.use(require('./Rutas/grupo.rutas'))
+
+
 
 module.exports = app
