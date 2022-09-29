@@ -1,20 +1,76 @@
 <link rel="stylesheet" href="">
+<div class="nombre_Quitus">
+    <h1>Crea tu cuenta</h1>
+    <p>¡Y vamos a Ciclear!</p>
+</div>
+    <div class="indicaciones_Registro">
+        <p>Ingresa datos reales<br> 
+        Los datos con * son obligatorios</p>
+    </div>
+
 <div id="contenedor">
     <form action="/registro" method="POST">
         <div>
-            <input type="text" name="username" id="" placeholder="Ingrese su nombre de usuario">
+            <div>
+                <input type="text" name="nombreCompleto_cliente" id="" placeholder="Ingresa tus dos nombres y dos apellidos">
+            </div>
+            <div>
+                <input type="text" name="username" id="" placeholder="Ingresa como quieres ser llamado">
+            </div>
+            <div>
+                <input type="text" name="celular_cliente" id="" placeholder="Número Celular">
+            </div>
+            <div>
+                <input type="text" name="correo_cliente" id="" placeholder="Correo Electrónico">
+            </div>
         </div>
+        <div class="Registro_Identificacion">
+             <p>Si eres de Ecuador selecciona cédula,<br> 
+             caso contrario escoge pasaporte.</p>
+
+             <select name="">
+                 <option value="Cedula">Cédula</option>
+                 <option value="Pasaporte">Pasaporte</option>
+                 <option value="noc" selected hidden>Identificación</option>
+             </select>
+             <div>
+                <input type="text" name="identificacion_cliente" id="" placeholder="Cédula">
+            </div>
+        </div>
+
         <div>
-            <input type="text" name="password" id="" placeholder="Ingrese su contraseña">
+            <div>
+                <input type="text" name="password" id="" placeholder="Contraseña">
+            </div>
+            <div>
+                <input type="text" name="" id="" placeholder="Confirmar Contraseña">
+            </div>
         </div>
-        <div>
-            <input type="text" name="nombreCompleto_cliente" id="" placeholder="Ingrese su nombre completo">
+
+        <div class="Registro_nacimiento">
+             <p>*¿Cuándo Naciste?</p>
+             <input type="text" name="fechaNacimiento_cliente" placeholder="00/00/0000">
         </div>
-        <div>
-            <input type="text" name="correo_cliente" id="" placeholder="Ingrese su correo">
+
+        <div class="Registro_foto">
+             <p>Sube tu foto</p>
+             <img src="" alt="">
+             <input type="text" name="fechaNacimiento_cliente" placeholder="00/00/0000">
         </div>
-        <div>
-            <button type="submit">Guardar</button>
-        </div>
+
+         <div>
+             <button type="submit" onclick="">Guardar</button>
+         </div>
+         <div>
+             <button type="submit">Cancelar</button>
+         </div>
     </form>
 </div>
+
+<!-- Selección fecha de nacimiento
+                 <ol name="">
+                 <option value="dia">Cédula</option>
+                 <option value="mes">Pasaporte</option>
+                 <option value="año" selected hidden>Identificación</option>
+             </ol>
+-->

@@ -8,7 +8,7 @@ const cliente = (sequelize, type)=>{
         nombreCompleto_cliente: type.STRING,
         clave_cliente: type.STRING,
         correo_cliente: type.STRING,
-        cedula_cliente: type.STRING(10),
+        identificacion_cliente: type.STRING(10),
         username_cliente: type.STRING(99),
         fechaNacimiento_cliente:type.STRING,
         foto_cliente: type.STRING,

@@ -56,7 +56,9 @@ passport.use(
         };
         nuevoUsuario.clave_cliente = await helpers.encryptPassword(password);
         const resultado = await orm.cliente.create(nuevoUsuario);
-        nuevoUsuario.id = resultado.insertId;
+        
+nuevoUsuario.id
+ = resultado.insertId;
         return done(null, nuevoUsuario);
       } else {
         if (usuarios) {
@@ -64,14 +66,17 @@ passport.use(
           if (username == usuario.username_cliente) {
             done(null, false, req.flash("message", "El nombre de usuario ya existe."))
           } else {
-            const {} = req.body
+            const {nombreCompleto_cliente} = req.body
             let nuevoUsuario = {
+              nombreCompleto_cliente, 
               username_cliente : username,
               clave_cliente : password 
             };
             nuevoUsuario.clave_cliente = await helpers.encryptPassword(password);
             const resultado = await orm.cliente.create(nuevoUsuario);
-            nuevoUsuario.id = resultado.insertId;
+            
+nuevoUsuario.id
+ = resultado.insertId;
             return done(null, nuevoUsuario);
           }
         }
@@ -86,4 +91,4 @@ passport.serializeUser(function (user, done) {
 
 passport.deserializeUser(function (user, done) {
   done(null, user);
-});
+}); 
