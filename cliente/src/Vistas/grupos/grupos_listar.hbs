@@ -10,13 +10,13 @@
   </div>
   <hr>
 </div>
-<form class="grupo-listar">
+<div class="grupo-listar">
   {{#each lista}}
   <a href="/grupos/editar/{{id_grupo}}">
     <div class="contenedor-lista">
       <div class="lista-grupo">
         <div class="imagenrec" id="nombre">
-          <p>{{foto_grupo}}</p>
+          <img src="/IMG/grupos//{{foto_grupo}}" alt="">
         </div>
         <div class="imagenrec" id="nombre">
           <p>{{nombre_grupo}}</p>

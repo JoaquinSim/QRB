@@ -8,7 +8,7 @@ const grupos = (sequelize, type)=>{
         nombre_grupo:type.STRING,
         rutas_grupo:type.STRING,
         descripcion_grupo:type.STRING,
-        foto_grupo:type.TEXT,
+        foto_grupo:type.STRING,
         creacionGrupo:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
