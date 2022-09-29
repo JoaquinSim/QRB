@@ -1,16 +1,14 @@
 <link rel="stylesheet" href="/CSS/grupos.css" />
+
+      {{#each lista}}
 <form
   class="form-agregar"
-  action="/grupos/editar/{{user.id_cliente}}"
+  action="/grupos/editar/{{id_grupo}}"
   method="post"
   id="main"
 >
   <div class="contenedor-agregar">
-    <div class="titulo-agregar"> <h1 class="">Editar grupo</h1></div>
-    <div class="contenedor-agregar__contenido" id="contenido">
-      {{#each lista}}
-        <div id="oculto">
-          <input
+    <div class="titulo-agregar"> <h1 class="">Editar grupo</h1>          <input
             class=""
             type="text"
             name="id_grupo"
@@ -19,8 +17,9 @@
             aria-checked="true"
             value="{{id_grupo}}"
             readonly
-          />
-        </div>
+          /></div>
+    <div class="contenedor-agregar__contenido" id="contenido">
+
         <div class="texto-agregar" id="contenido">
           <div class="input-agregar" id="nombre">
             <input
@@ -43,7 +42,7 @@
               checked
               aria-checked="true"
               placeholder="Inserte los integrantes del grupo"
-              value="{{integrentes_detalleGrupo}}"
+              value="{{integrantes_detalleGrupo}}"
             />
           </div>
           <div class="input-agregar" id="rutas">
@@ -78,7 +77,7 @@
         </div>
         <div class="contenedor-imagen">
           <div class="imagenrec" id="nombre">
-            <img src="/IMG/grupos//{{foto_grupo}}" alt="" />br
+            <img src="/IMG/grupos//{{foto_grupo}}" alt="" />
           </div>
           <input type="file" name="foto_grupo" id="foto_grupo" />
           <div class="botones">
