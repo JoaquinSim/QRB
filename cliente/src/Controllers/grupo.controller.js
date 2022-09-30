@@ -101,7 +101,7 @@ grupoCTL.actualizar = async (req, res) => {
   await orm.grupos
     .findOne({ where: { id_grupo: id_grupo } })
     .then((actualizacion) => {
-      actualizacion.update(nuevoGrupo);
+      actualizacion.update(nuevoGrupo);fff
     });
   req.flash("success", "Exito al guardar");
   res.redirect("/grupos/listar/" + id);
