@@ -1,0 +1,9 @@
+/* redes sociales*/
+.footer{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}
+.container-fluid {
+    background: url("/IMG/logo.jpeg");
+}

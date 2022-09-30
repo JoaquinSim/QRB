@@ -24,7 +24,7 @@ grupoCTL.enviar = async (req, res) => {
   };
   const nuevoDetalleGrupo = {
     integrantes_detalleGrupo, 
-    grupoIdGrupo: id_grupo
+    grupoIdProducto: id
   };
   const nuevoTipoCiclismo = {
     nombre_tipoCiclismo,
@@ -85,10 +85,13 @@ grupoCTL.listar = async (req, res) => {
 
 grupoCTL.traer = async (req, res) => {
   const id = req.params.id;
-
-  const detalle = await sql.query("SELECT * FROM detalleGrupos WHERE grupoIdGrupo  =?", [id]);
-
-  res.render("grupos/grupos_editar", {  detalle});
+  const lista = await sql.query("select * from grupos where id_grupo=?", [
+    id,
+  ]);
+  const listaDetalleGrupo = await sql.query("select * from detalleGrupos where id_detalleGrupo=?", [
+    id,
+  ]);
+  res.render("grupos/grupos_editar", { lista, listaDetalleGrupo });
 };
 
 grupoCTL.actualizar = async (req, res) => {
