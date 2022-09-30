@@ -1,14 +1,19 @@
 <link rel="stylesheet" href="../../CSS/login.css" />
-<div id="contenedor">
-    <form action="/login" method="POST">
-        <div>
-            <input type="text" name="username" id="">
-        </div>
-        <div>
-            <input type="text" name="password" id="">
-        </div>
-        <div>
-            <button type="submit">Ingresar</button>
-        </div>
-    </form>
-</div>
+ <div class="login-box">
+        <img src="/IMG/login1.jpeg" class="avatar" alt="Imagen del avatar">
+        <h1>A ciclear</h1>
+        <form action="/login" method="post">
+            <!-- USERNAME INPUT -->
+
+            Usuario:<label for="Usuario"></label>
+            <input class="controls" type="text" style="" name="username" id="Usuario" placeholder="&#128100; Nombre de usuario" required><br/>
+            <!-- PASSWORD INPUT -->
+            Password: <label for="password"></label>
+            <input type="password" name="password" id="password" placeholder="&#128272; Ingrese Clave" required>
+            <br></br>
+            <button type="submit" value="Login">Ingresar</button>
+            <br> </br>
+            <a href="">Olvidaste tu clave?</a><br>
+            <a href="/registro">Crear una cuenta?</a>
+        </form>
+    </div>
