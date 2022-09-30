@@ -19,6 +19,12 @@
   justify-content: center;
   align-items: center;
 }
+.logoo{
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  justify-content: space-around;
+}
 .slide-logo {
   display: flex;
   justify-content: space-between;
@@ -46,7 +52,8 @@
 }
 .slide--menu {
   transform: rotate(90deg);
-  width: 10px;
+  width: 15px;
+  margin-left: -15px;
 }
 .slide:hover {
   cursor: pointer;
@@ -60,9 +67,10 @@
   left: 0px;
   display: none;
   width: 400px;
-  height: 750px;
+  height: 100%;
   color: white;
   background-color: black;
+  font-size: 20px;
 }
 .logo {
   width: 40%;
@@ -72,7 +80,15 @@
 }
 .header-contenedor__titulo {
   color: white;
-  font-size: 18px;
+  font-size: 19px;
+}
+.titulo{
+  color: white;
+  transition: .3s;
+}
+.titulo:hover{
+  color: #E67E22 ;
+  text-decoration: none;
 }
 .header-contenedor__menu {
   width: 30px;
@@ -91,15 +107,27 @@
   background-color: black;
   right: 0;
   top: 70px;
+  width: 160px;
+}
+.lis{
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  width: 100%;
+}
+.header__menu li {
+  list-style: none;
   width: 150px;
-  text-align: left;
+  text-align: center;
+  margin-left: -35px;
+  margin-top: 10px;
+  transition: .4s;
+}
+.header__menu li:hover{
+  background-color: #28B463 ;
 }
 .header__menu a {
   color: white;
-}
-.header__menu li {
-  background-color: red;
-  list-style: none;
   text-decoration: none;
-  
+  font-size: 20px;
 }
