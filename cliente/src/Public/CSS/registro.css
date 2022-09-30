@@ -1,0 +1,157 @@
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    background: #000;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+#logoprincipal {
+    top: 1%;
+    left: 37%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+#contenedor {
+    width: 700px;
+    height: 725px;
+    background: #fff;
+    color: rgb(0, 0, 0);
+    top: 52%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 10px;
+}
+
+.nombre_Quitus{
+    margin-top: -10%;
+    margin-bottom: 1%;
+    text-align: center;
+    border-bottom-width: 2px;
+    border-bottom-color: #ccd0d5;
+    border-bottom-style: solid;
+}
+
+.indicaciones_Registro{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+    border-bottom-width: 2px;
+    border-bottom-color: #ccd0d5;
+    border-bottom-style: solid;
+}
+
+.indicaciones_Registro_p{
+    margin-bottom: 1%;
+}
+
+.formulario_datos_basicos{
+    margin-top: 2%;
+    margin-left: 4%;
+    border-bottom-width: 2px;
+    border-bottom-color: #ccd0d5;
+    display: flex;
+}
+
+.formulario_datos_basicos_11{
+    display: flex;
+    align-items: center;
+
+}
+.formulario_datos_basicos_1{
+    width: 335px;
+}
+
+.formulario_datos_basicos_1_1{
+    width: 335px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nombreCompleto_cliente, #username, #celular_cliente,
+#correo_cliente, #identificacion_cliente, #password,
+#password2, #fechaNacimiento_cliente, #pais_ubicacionCliente,  
+#ciudad_ubicacionCliente, #barrio_cliente, select {
+    margin-bottom: 4%;
+    border-bottom-width: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top-color: #ffffff;
+    border-bottom-color: #ccd0d5;
+    border-bottom-style: solid;
+}
+
+#correo_cliente{
+    width: 335px;
+}
+
+#nombreCompleto_cliente{
+    width: 335px;
+    text-align: start;
+}
+
+#username, #celular_cliente,  #pais_ubicacionCliente,
+#ciudad_ubicacionCliente{
+    width: 160px;
+}
+
+.Registro_Identificacion {
+    width: 245px;
+    margin-left: 3%;
+    border: solid;
+    border-color: #ccd0d5;
+    border-radius: 10px;
+}
+
+#Registro_Identificacion_parrafo {
+    width: 235px;
+    text-align: center;
+}
+
+#Registro_Identificacion_parrafo_select, #identificacion_cliente{
+    width: 140px;
+    margin-left: 23%;
+    text-align: center;
+}
+
+.contrasenias {
+    height: 50px;
+    margin-top: 2%;
+    margin-bottom: -1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#password, #password2, #barrio_cliente {
+    width: 300px;
+}
+
+.Registro_foto_ubicacion{
+    display: flex;
+    justify-content: space-around;
+}
+.Registro_nacimiento, .Registro_foto{
+    width: 200px;
+    height: 140px;
+    margin-left: 3%;
+    border: solid;
+    border-color: #ccd0d5;
+    border-radius: 10px;
+}
+
+.Registro_foto_p, #Registro_foto_img{
+    width: 90px;
+    margin-left: 27%;
+}
+
+
+
