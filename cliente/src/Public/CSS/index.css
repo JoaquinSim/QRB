@@ -137,9 +137,9 @@ img {
 
 .container-all {
     position: relative;
-    max-width: 400px;
+    max-width: 600px;
     width: 500%;
-    border-radius: 6px;
+    border-radius: 0px;
     overflow: hidden;
 }
 
@@ -254,7 +254,7 @@ input[id="3"]:checked~.pagination .pagination-item[for="3"] {
     padding: 0px;
     margin: 0px;
     position: fixed;
-    right: -130px;
+    right: -170px;
     top: 230px;
     width: 210px;
     z-index: 1100;
