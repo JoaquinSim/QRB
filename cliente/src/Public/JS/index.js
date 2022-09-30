@@ -9,8 +9,8 @@ function cerrarSlide(){
     document.getElementById("main").style.opacity = "1";
 }
 function desplegarMenu(){
-    document.getElementById("header-menu").style.display = "block";
-
+    document.getElementById("header-menu").style.display = "flex";
+    document.getElementById("header-menu").style.transition = ".3s";
 }
 function cerrarMenu(){
     document.getElementById("header-menu").style.display = "none";

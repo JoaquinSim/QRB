@@ -16,19 +16,20 @@
   </ul>
 </nav>
 <header class="header" id="header">
-
-        <img class="logo logo-small" src="/IMG/logoQuitus.jpeg" alt="cerrarmenu" onclick="cerrarSlide()" />
   <div class="header-contenedor" id="header-contenedor">
+    <div class="">
       <img class="slide" src="/IMG/menu.png" alt="" id="slidemenu" onclick="desplegarSlide()" />
+        <img class="logo logo-small" src="/IMG/logoQuitus.jpeg" alt="cerrarmenu" onclick="cerrarSlide()" />
+        </div>
     <div class="header-contenedor__titulo">
-      <h6><a href="/inicio"> QUITUS RIDE-BIKE</a></h6>
+      <h5><a href="/inicio" class="titulo"> QUITUS RIDE-BIKE</a></h5>
     </div>
     <div class="header-contenedor__menu">
-      <img class="menu" src="/IMG/usuario.png" alt="" onclick="desplegarMenu()" />
+      <img class="menu" src="/IMG/usuario.png" alt="" onclick="desplegarMenu()" ondblclick=""/>
     </div>
     <div class="header__menu" id="header-menu">
-      <ul>
-        <li><img class="slide slide--menu" src="/IMG/cerrarmenu.png" alt="" onclick="cerrarMenu()"></li>
+      <ul class="lis">
+        <img class="slide slide--menu" src="/IMG/cerrarmenu.png" alt="" onclick="cerrarMenu()" >
         <li><a href="#">Perfil</a></li>
         <li><a href="/cerrarsesion">Cerrar Sesion</a></li>
       </ul>
