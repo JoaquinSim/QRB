@@ -1,7 +1,7 @@
 /* redes sociales*/
 .footer{
     position:absolute;
-    bottom:0;
+    bottom:-100px;
     width: 100%;
 }
 .container-fluid {
