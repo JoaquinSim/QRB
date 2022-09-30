@@ -1,13 +1,11 @@
 <link rel="stylesheet" href="/CSS/registro.css">
 <body>
-
-        <img src="/IMG/logo_principal.JPG" id="logoprincipal">
     
 <div id="contenedor">
     <form action="/registro" method="POST">
         <div class="nombre_Quitus">
-            <h3>Crea tu cuenta</h3>
-            <p>¡Y vamos a Ciclear!</p>
+            <h3 class="nombre_Quitus_h3">Crea tu cuenta</h3>
+            <p class="nombre_Quitus_p">¡Y vamos a Ciclear!</p>
         </div>
          <div class="indicaciones_Registro">
               <p class="indicaciones_Registro_p">Ingresa datos reales<br> 
@@ -45,22 +43,15 @@
 
         <div class="Registro_foto_ubicacion">
             <div class="Registro_nacimiento">
-                <p>*¿Cuándo Naciste?</p>
+                <p class="Registro_nacimiento_p">*¿Cuándo Naciste?</p>
                 <input type="text" name="fechaNacimiento_cliente" id="fechaNacimiento_cliente" placeholder="00/00/0000">
             </div>
 
             <div class="Registro_foto">
+                <input style="display:none" type="file" name="foto_cliente" id="foto_cliente">
                 <p class="Registro_foto_p">Sube tu foto</p>
                     <img src="/IMG/usuario.png" id="Registro_foto_img">
             </div>
-        </div>
-            <div class="Registro_ubicacion">
-                <p>¿Dónde Vives?</p>
-                <input type="text" name="pais_ubicacionCliente" id="pais_ubicacionCliente" placeholder="País">
-                <input type="text" name="ciudad_ubicacionCliente" id="ciudad_ubicacionCliente" placeholder="Ciudad">
-                <input type="text" name="barrio_cliente" id="barrio_cliente" placeholder="Barrio">
-            </div>
-    
         <div class="Registro_disciplina">
              <p>¿Qué tipo de ciclismo vas a practicar?</p>
              <select name="">
@@ -68,18 +59,28 @@
                  <option value="disciplina1">disciplina2</option>
                  <option value="noc" selected hidden>Disciplina</option>
              </select>
+        </div>            
         </div>
+            <div class="Registro_ubicacion">
+                <p class="Registro_ubicacion_p">¿Dónde Vives?</p>
+                <input type="text" name="pais_ubicacionCliente" id="pais_ubicacionCliente" placeholder="País">
+                <input type="text" name="ciudad_ubicacionCliente" id="ciudad_ubicacionCliente" placeholder="Ciudad">
+                <input type="text" name="barrio_cliente" id="barrio_cliente" placeholder="Barrio">
+            </div>
+    
+        <div class="botones">
+            <div>
+                <input type="checkbox" name="" id="checkbox">
+                 <small>*Acepto los términos de uso y la Política de privacidad de Quitus RideBike"</small> 
+            </div>            
+            <div>
+                <button type="submit" onclick="" id="Registrarse">Registrarme</button>
+            </div>
+            <div>
+                <a href="/Login">¿Ya tienes una cuenta?<br> Inicia Sesión</a> 
+            </div>
 
-         <div>
-             <button type="submit" onclick="">Registrarme</button>
-         </div>
-         <div>
-            <a href="/login">Regresar al login</a> 
-         </div>
-
-         <div>
-            <input type="checkbox" name="" id="" placeholder="*Acepto los términos de uso y la Política de privacidad de Quitus RideBike">
-         </div>
+        </div>
     </form>
 </div>
 </body>
