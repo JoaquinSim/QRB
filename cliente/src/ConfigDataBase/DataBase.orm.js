@@ -105,6 +105,7 @@ detalleGrupos.belongsTo(grupos)
 detalleGrupos.hasMany(tiposCiclismo)
 tiposCiclismo.belongsTo(detalleGrupos)
 
+
 //tipoCiclismo-detalleCliente
 tiposCiclismo.hasMany(detalle_cliente)
 detalle_cliente.belongsTo(tiposCiclismo)

@@ -8,7 +8,8 @@
   id="main"
 >
   <div class="contenedor-agregar">
-    <div class="titulo-agregar"> <h1 class="">Editar grupo</h1>          <input
+    <div class="titulo-agregar"> <h1 class="">Editar grupo</h1>     
+         <input
             class="oculto"
             type="text"
             name="id_grupo"
@@ -17,7 +18,20 @@
             aria-checked="true"
             value="{{id_grupo}}"
             readonly
-          /></div>
+          />
+                </div>
+          {{/each}}<!--
+      {{#each tipc}}
+        <input
+          type="text"
+          name="id_tipoCiclismo"
+          id="numero1"
+          value="{{'max(id_tipoCiclismo)'}}"
+          readonly
+          style="background-color: red;"
+        />
+      {{/each}}-->
+{{#each lista}}
     <div class="contenedor-agregar__contenido" id="contenido">
 
         <div class="texto-agregar" id="contenido">
@@ -33,6 +47,8 @@
               value="{{nombre_grupo}}"
             />
           </div>
+                {{/each}}
+                {{#each listaDetalleGrupo}}
           <div class="input-agregar" id="integrantes">
             <input
               class="input"
@@ -45,27 +61,29 @@
               value="{{integrantes_detalleGrupo}}"
             />
           </div>
+          {{/each}}
+          {{#each lista}}
           <div class="input-agregar" id="rutas">
-            <input
-              class="input"
-              type="text"
-              name="rutas_grupo"
-              id="nombre_grupo"
-              checked
-              aria-checked="true"
-              placeholder="Inserte las rutas del grupo"
-              value="{{rutas_grupo}}"
-            />
+            <select name="rutas_grupo" id="" class="input" >
+             <option value="" style="background-color: black; color:white;">{{rutas_grupo}}</option>
+             <option value="Ruta 1 Sur" >Ruta 1 Sur</option>
+             <option value="Ruta 1 Centro" >Ruta 1 Centro</option>
+             <option value="Ruta 1 Norte" >Ruta 1 Norte</option>
+            </select>
           </div>
+          {{/each}}
+          {{#each tipc}}
           <div class="input-agregar" id="tipoCiclismo">
-            <input
-              type="text"
-              name="nombre_tipoCiclismo"
-              class="input"
-              placeholder="Inserte el tipo de ciclismo del grupo"
-              value="{{nombre_tipoCiclimo}}"
-            />
+            <select name="nombre_tipoCiclismo" id="" class="input">
+             <option value="" style="background-color: black; color:white;">{{nombre_tipoCiclismo}}</option>
+             <option value="Montañismo" >Montañismo</option>
+             <option value="Ciclismo de ruta" >Ciclismo de ruta</option>
+             <option value="BiciCross" >BiciCross</option>
+             <option value="Ciclopaseo" >Ciclopaseo</option>
+            </select>
           </div>
+          {{/each}}
+          {{#each lista}}
           <div class="input-agregar" id="descripcion">
             <input
               name="descripcion_grupo"
@@ -84,16 +102,15 @@
             <div id="guardar">
               <button type="submit" class="grupo-boton"><b>Guardar</b></button>
             </div>
+            <div id="eliminar">
+          <a href="/grupos/eliminar/{{id_grupo}}"><b>Eliminar</b></a>
+            </div>
             <div>
               <a href="/grupos/listar/{{id_grupo}}">Regresar</a>
-            </div><!--
-            <div id="">
-              <button class="grupo-boton"><b>Eliminar</b></button>
-            </div>-->
+            </div>
           </div>
-
+{{/each}}
         </div>
-      {{/each}}
     </div>
   </div>
 </form>
