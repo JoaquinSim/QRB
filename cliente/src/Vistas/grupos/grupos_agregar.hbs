@@ -54,6 +54,7 @@
             checked
             aria-checked="true"
             placeholder="Inserte el nombre del grupo"
+            required
           />
         </div>
         <div class="input-agregar" id="integrantes">
@@ -65,10 +66,11 @@
             checked
             aria-checked="true"
             placeholder="Inserte los integrantes del grupo"
+            required
           />
         </div>
         <div class="input-agregar" id="rutas">
-          <select name="rutas_grupo" id="" class="input">
+          <select name="rutas_grupo" id="" class="input" required>
             <option
               value=""
               style="background-color: black; color:white;"
@@ -79,7 +81,7 @@
           </select>
         </div>
         <div class="input-agregar" id="tipoCiclismo">
-          <select name="nombre_tipoCiclismo" id="" class="input">
+          <select name="nombre_tipoCiclismo" id="" class="input" required>
             <option
               value=""
               style="background-color: black; color:white;"
@@ -95,12 +97,13 @@
             name="descripcion_grupo"
             class="input input--area"
             placeholder="Inserte la descripcion del grupo"
+            required
           ></textarea>
         </div>
       </div>
       <div class="contenedor-imagen">
         <div class="imagen">
-          <input type="file" name="foto_grupo" id="foto_grupo" required/>
+          <input type="file" name="foto_grupo" id="foto_grupo" id="src-file1" required/>
         </div>
         <div class="botones">
           <div id="guardar">
