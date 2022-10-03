@@ -1,5 +1,5 @@
 const express = require('express');
-const { listar, mostrar, enviar, traer, actualizar } = require('../Controllers/grupo.controller');
+const { listar, mostrar, enviar, traer, actualizar, eliminar } = require('../Controllers/grupo.controller');
 
 const router = express.Router();
 
@@ -12,5 +12,7 @@ router.post("/grupos/agregar/:id", enviar)
 router.get("/grupos/editar/:id", traer)
 
 router.post("/grupos/editar/:id", actualizar)
+
+router.get('/grupos/eliminar/:id', eliminar)
 
 module.exports = router
