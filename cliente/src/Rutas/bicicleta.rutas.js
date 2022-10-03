@@ -3,6 +3,6 @@ const { mostrarBicicleta } = require('../Controllers/bicicleta.controller');
 
 const router = express.Router();
 
-router.get('/bicicleta', mostrarBicicleta)
+router.get('/bicicleta/inicio', mostrarBicicleta)
 
 module.exports = router
