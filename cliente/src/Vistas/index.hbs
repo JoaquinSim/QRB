@@ -1,21 +1,28 @@
 <link rel="stylesheet" href="/CSS/index.css" />
-<link rel="stylesheet" href="/CSS/footer.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap"
+  rel="stylesheet"
+/>
 
-<body>
+<div>
   <!--HEADER-->
   <nav class="slidebar" id="slide">
     <ul>
       <li>
         <div class="header-contenedor__logo">
           <div class="slide-logo">
-            <img class="slideN" src="/IMG/cerrarmenu.png" alt="cerrarmenu" onclick="cerrarSlide()" />
+            <img
+              class="slideN"
+              src="/IMG/cerrarmenu.png"
+              alt="cerrarmenu"
+              onclick="cerrarSlide()"
+            />
             <img class="logo" src="/IMG/logoQuitus.jpeg" alt="" />
           </div>
         </div>
-        <hr style="background-color: white;">
+        <hr style="background-color: white;" />
       </li>
       <li class="nav-list"><a href="">Bicicletas</a></li>
       <li class="nav-list"><a href="">Grupos de ciclismo</a></li>
@@ -23,98 +30,123 @@
     </ul>
   </nav>
   <header class="header" id="header">
-    <img class="slide" src="/IMG/menu.png" alt="" id="slidemenu" onclick="desplegarSlide()" />
     <div class="header-contenedor" id="header-contenedor">
+      <img
+        class="slide"
+        src="/IMG/menu.png"
+        alt=""
+        id="slidemenu"
+        onclick="desplegarSlide()"
+      />
       <div class="header-contenedor__titulo">
-       <a href="/" class="titulo"> QUITUS RIDE-BIKE</a>
+        <a href="/" class="titulo"> QUITUS RIDE-BIKE</a>
       </div>
       <div class="header-contenedor__menu">
-        <img class="menu" src="/IMG/usuario.png" alt="" onclick="desplegarMenu()" />
+        <img
+          class="menu"
+          src="/IMG/usuario.png"
+          alt=""
+          onclick="desplegarMenu()"
+        />
       </div>
       <div class="header__menu" id="header-menu">
         <ul class="lis">
-          <img class="slide slide--menu" src="/IMG/cerrarmenu.png" alt="" onclick="cerrarMenu()">
+          <img
+            class="slide slide--menu"
+            src="/IMG/cerrarmenu.png"
+            alt=""
+            onclick="cerrarMenu()"
+          />
           <li><a href="/login">Iniciar Sesion</a></li>
           <li><a href="/registro">Registrate</a></li>
         </ul>
       </div>
 
     </div>
-    </div>
   </header>
 
   <!--SECCION PRINCIPAL-->
+  <!-- apartado de informacion-->
+
+
   <!-- carrusel de imagenes-->
-    <div class="container-all">
+  <div class="container-all" id="main">
+    <input type="radio" id="1" name="image-slide" hidden />
+    <input type="radio" id="2" name="image-slide" hidden />
+    <input type="radio" id="3" name="image-slide" hidden />
 
-        <input type="radio" id="1" name="image-slide" hidden/>
-        <input type="radio" id="2" name="image-slide" hidden/>
-        <input type="radio" id="3" name="image-slide" hidden/>
+    <div class="slide-n">
 
-        <div class="slide-n">
+      <div class="item-slide">
+        <img src="img/img4.png" />
+      </div>
 
-            <div class="item-slide">
-                <img src="img/img1.jpeg">
-            </div>
 
-            <div class="item-slide">
-                <img src="img/img4.png">
-            </div>
+      <div class="item-slide">
+        <img src="img/quitus1.1.jpeg" />
+      </div>
 
-            <div class="item-slide">
-                <img src="img/img3.png">
-            </div>
-        </div>
-        <div class="pagination">
-
-            <label class="pagination-item" for="1">
-                <img src="img/img1.jpeg">
-            </label>
-
-            <label class="pagination-item" for="2">
-                <img src="img/img4.png">
-            </label>
-
-            <label class="pagination-item" for="3">
-                <img src="img/img3.png">
-            </label>
-
-        </div>
+      <div class="item-slide">
+        <img src="img/img3.png" />
+      </div>
+    
+      <div class="item-slide">
+        <img src="img/Quitus4.JPEG" />
+      </div>
 
     </div>
-<!-- redes sociales -->
-    <div class="sticky-container ">
-        <ul class="sticky ">
-            <li>
-                <img src="/img/facebook.png " width="32 " height="32 ">
-                <p>
-                    <a href=" " target="_blank ">Síguenos en<br>Facebook</a>
-                </p>
-            </li>
-            <li>
-                <img src="/img/whatsapp.png " width="32 " height="32 ">
-                <p><a href=" " target="_blank ">Escríbenos a<br>Whatsapp</a></p>
-            </li>
-            <li>
-                <img src="/img/instagram.png " width="32 " height="32 ">
-                <p><a href=" " target="_blank ">Síguenos en<br>Instagram</a></p>
-            </li>
+    <div class="pagination">
 
-            <li>
-                <img src="/img/google.png " width="32 " height="32 ">
-                <p><a href=" " target="_blank ">Escríbenos a nuestro <br>Correo</a></p>
-            </li>
+      <label class="pagination-item" for="1">
+        <img src="img/img1.jpeg" />
+      </label>
 
-        </ul>
+      <label class="pagination-item" for="2">
+        <img src="img/img4.png" />
+      </label>
+
+      <label class="pagination-item" for="3">
+        <img src="img/img3.png" />
+      </label>
+
     </div>
+  </div>
+  </div>
+  <!-- redes sociales -->
+  <div class="sticky-container">
+    <ul class="sticky">
+      <li>
+        <img src="/img/facebook.png " width="32 " height="32 " />
+        <p>
+          <a href=" " target="_blank ">Síguenos en<br />Facebook</a>
+        </p>
+      </li>
+      <li>
+        <img src="/img/whatsapp.png " width="32 " height="32 " />
+        <p><a href=" " target="_blank ">Escríbenos a<br />Whatsapp</a></p>
+      </li>
+      <li>
+        <img src="/img/instagram.png " width="32 " height="32 " />
+        <p><a href=" " target="_blank ">Síguenos en<br />Instagram</a></p>
+      </li>
+
+      <li>
+        <img src="/img/google.png " width="32 " height="32 " />
+        <p><a href=" " target="_blank ">Escríbenos a nuestro
+            <br />Correo</a></p>
+      </li>
+
+    </ul>
+  </div>
 
   <!--FOOTER-->
-  
- <footer class="footer">
-    <div class="container-fluid text-center text-white bg-dark p-3 ">
-        <p class="small ">&copy; Todos los Derechos Reservados | QUITUS-RIDEBIKE | 2022</p>
+
+  <footer class="footer">
+    <div class="container-fluid text-center text-white bg-dark p-3">
+      <p class="small">&copy; Todos los Derechos Reservados | QUITUS-RIDEBIKE |
+        2022</p>
     </div>
-</footer>
+  </footer>
 
 </body>
 <script src="/JS/index.js"></script>

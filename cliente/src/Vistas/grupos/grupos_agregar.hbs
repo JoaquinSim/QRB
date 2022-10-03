@@ -13,12 +13,36 @@
       {{#each max}}
         <input
           type="text"
+          class="oculto"
           name="id_grupo"
           id="numero"
           value="{{'max(id_grupo)'}}"
           readonly
         />
-      {{/each}}</div>
+      {{/each}}
+      {{#each maxt}}
+        <input
+          type="text"
+          class="oculto"
+          name="id_tipoCiclismo"
+          id="numero1"
+          value="{{'max(id_tipoCiclismo)'}}"
+          readonly
+          style="background-color: red;"
+        />
+      {{/each}}
+      {{#each maxd}}
+        <input
+          type="text"
+          class="oculto"
+          name="id_detalleGrupo"
+          id="numero2"
+          value="{{'max(id_detalleGrupo)'}}"
+          readonly
+          style="background-color: green;"
+        />
+      {{/each}}
+    </div>
     <div class="contenedor-agregar__contenido">
       <div class="texto-agregar" id="contenido">
         <div class="input-agregar" id="nombre">
@@ -30,6 +54,7 @@
             checked
             aria-checked="true"
             placeholder="Inserte el nombre del grupo"
+            required
           />
         </div>
         <div class="input-agregar" id="integrantes">
@@ -41,38 +66,44 @@
             checked
             aria-checked="true"
             placeholder="Inserte los integrantes del grupo"
+            required
           />
         </div>
         <div class="input-agregar" id="rutas">
-          <input
-            class="input"
-            type="text"
-            name="rutas_grupo"
-            id="nombre_grupo"
-            checked
-            aria-checked="true"
-            placeholder="Inserte las rutas del grupo"
-          />
+          <select name="rutas_grupo" id="" class="input" required>
+            <option
+              value=""
+              style="background-color: black; color:white;"
+            >Seleccione la ruta</option>
+            <option value="Ruta 1 Sur">Ruta 1 Sur</option>
+            <option value="Ruta 1 Centro">Ruta 1 Centro</option>
+            <option value="Ruta 1 Norte">Ruta 1 Norte</option>
+          </select>
         </div>
         <div class="input-agregar" id="tipoCiclismo">
-          <input
-            type="text"
-            name="nombre_tipoCiclismo"
-            class="input"
-            placeholder="Inserte el tipo de ciclismo del grupo"
-          />
+          <select name="nombre_tipoCiclismo" id="" class="input" required>
+            <option
+              value=""
+              style="background-color: black; color:white;"
+            >Seleccione el tipo de ciclismo</option>
+            <option value="Montañismo">Montañismo</option>
+            <option value="Ciclismo de ruta">Ciclismo de ruta</option>
+            <option value="BiciCross">BiciCross</option>
+            <option value="Ciclopaseo">Ciclopaseo</option>
+          </select>
         </div>
         <div class="input-agregar" id="descripcion">
           <textarea
             name="descripcion_grupo"
             class="input input--area"
             placeholder="Inserte la descripcion del grupo"
+            required
           ></textarea>
         </div>
       </div>
       <div class="contenedor-imagen">
         <div class="imagen">
-          <input type="file" name="foto_grupo" id="foto_grupo" />
+          <input type="file" name="foto_grupo" id="foto_grupo" id="src-file1" required/>
         </div>
         <div class="botones">
           <div id="guardar">

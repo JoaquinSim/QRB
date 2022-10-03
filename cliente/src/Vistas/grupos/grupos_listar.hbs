@@ -10,7 +10,7 @@
   </div>
   <hr>
 </div>
-<div class="grupo-listar">
+<div class="grupo-listar" id="main">
   {{#each lista}}
   <a href="/grupos/editar/{{id_grupo}}">
     <div class="contenedor-lista">
@@ -18,7 +18,7 @@
         <div class="imagenrec" id="nombre">
           <img src="/IMG/grupos//{{foto_grupo}}" alt="">
         </div>
-        <div class="imagenrec" id="nombre">
+        <div class="nombrerec" id="nombre">
           <p>{{nombre_grupo}}</p>
         </div>
       </div>
@@ -26,11 +26,11 @@
   </a>
   {{else}}
 </div>
-<div class="contenedorM">
+<div class="contenedorM" id="main">
   <div class="contenedor__mensaje">
     <p>No existen grupos registrados</p>
     <p>¿Agregar un nuevo grupo?</p>
-    <a href="/grupos/agregar/{{user.id_cliente}}"><button class="grupo-boton boton"><b>Agregar</b></button></a>
+    <a href="/grupos/agregar/{{user.id_cliente}}"><button class="grupo-boton "><b>Agregar</b></button></a>
   </div>
 </div>
 {{/each}}
