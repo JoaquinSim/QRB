@@ -1,0 +1,236 @@
+<link rel="stylesheet" href="/CSS/bicicleta.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+    <form action="/bicicleta/inicio" method="GET">
+
+    </form>
+<div class="content">
+
+        <h1 class="logo">Bicicletas<span>Perdidas y Robadas</span></h1>
+        <!-- foto -->
+        <label for="photo">Incluya una foto de la Bicicleta</label>
+        <br>
+        <br>
+        <div class="drag-drop">
+            <input type="file" multiple="multiple" id="photo" />
+            <span class="fa-stack fa-2x">
+<i class="fa fa-cloud fa-stack-2x bottom pulsating"></i>
+<i class="fa fa-circle fa-stack-1x top medium"></i>
+<i class="fa fa-arrow-circle-up fa-stack-1x top"></i>
+</span>
+            <span class="desc">Pulse aquí para añadir archivos</span>
+        </div>
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+
+                <form action="">
+                    <div class="container" required>
+                        <h4>Estado de la Bicicleta</h4>
+                        <div class="select-box" required>
+                            <div class="options-container" required>
+
+                                <div class="option" required>
+                                    <input type="radio" class="radio" id="film" name="category" />
+                                    <label for="film">Perdida</label>
+                                </div>
+
+                                <div class="option" required>
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">Robada</label>
+                                </div>
+                            </div>
+
+                            <div class="selected" required>
+                                Seleccione....
+                            </div>
+                        </div>
+                    </div>
+                    <!--seleccion marca-->
+                    <div class="container-2" required>
+                        <h4>Marca de la Bicicleta</h4>
+                        <div class="select-box-2">
+                            <div class="options-container-2" required>
+
+                                <div class="option2" required>
+                                    <input type="radio" class="radio" id="film" name="category" />
+                                    <label for="film">Trek</label>
+                                </div>
+
+                                <div class="option2" required>
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">Ger</label>
+                                </div>
+
+                                <div class="option2" required>
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">Giant</label>
+                                </div>
+                                <div class="option2" required>
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">Orbea</label>
+                                </div>
+                                <div class="option2" required>
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">Specialized</label>
+                                </div>
+                                <div class="option2" required>
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">Marin</label>
+                                </div>
+                                <div class="option2" required>
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">Otra</label>
+                                </div>
+                            </div>
+
+                            <div class="selected2" required>
+                                Seleccione....
+                            </div>
+                        </div>
+                    </div>
+                    <!--datos-->
+
+
+                    <p>
+                        <label>Color Principal</label>
+                        <input type="text" name="">
+                    </p>
+
+                    <p>
+                        <label>Color Secundario</label>
+                        <input type="email" name="email">
+                    </p>
+                    <!--aro de bici-->
+                    <div class="container-3">
+                        <h4>Rin de la Bicicleta</h4>
+                        <div class="select-box-3">
+                            <div class="options-container-3">
+
+                                <div class="option3">
+                                    <input type="radio" class="radio" id="film" name="category" />
+                                    <label for="film">20</label>
+                                </div>
+
+                                <div class="option3">
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">24</label>
+                                </div>
+
+                                <div class="option3">
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">26</label>
+                                </div>
+                                <div class="option3">
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">27.5</label>
+                                </div>
+                                <div class="option3">
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">29</label>
+                                </div>
+
+                                <div class="option3">
+                                    <input type="radio" class="radio" id="science" name="category" />
+                                    <label for="science">Otra</label>
+                                </div>
+                            </div>
+
+                            <div class="selected3">
+                                Seleccione....
+                            </div>
+                        </div>
+                    </div>
+                    <!--datos-->
+                    <p>
+                        <label>Número de Serie de la Bicicleta</label>
+                        <input type="text" name="phone">
+                    </p>
+
+                    <!--datos-->
+                    <p>
+                        <label>Lugar de Perdida o Robo (Dirección)</label>
+                        <input type="text" name="">
+                    </p>
+                    <!--fecha de perdida o robada-->
+                    <fieldset class=" ">
+                        <h4> &#x1F4C6; Fecha de Robo o Perdida</4>
+
+                            <select id="day" name="day" class="select_day cart_select italic semibold">
+        <option selected hidden>Día</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        </select>
+
+                            <select id="month" name="month" class="select_month cart_select italic light">
+        <option selected hidden>Mes</option>
+        <option value="01">Enero</option>
+        <option value="02">Febrero</option>
+        <option value="03">Marzo</option>
+        <option value="04">Abril</option>
+        <option value="05">Mayo</option>
+        <option value="06">Junio</option>
+        <option value="07">Julio</option>
+        <option value="08">Agosto</option>
+        <option value="09">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+        </select>
+                            <select id="year" name="year" class="select_year cart_select italic light">
+        <option selected hidden>Año</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>                         
+
+        </select>
+                    </fieldset>
+                    <br>
+                    <br>
+                    
+                    <p class="block">
+                        <label>Descripción de la Bicicleta</label>
+                        <textarea name="message" rows="3"></textarea>
+                    </p>
+                    <p class="block">
+                        <button> Registrar</button>
+                    </p>
+                     </form>
+            </div>
+        </div>
+    </div>

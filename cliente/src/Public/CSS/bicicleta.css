@@ -1,0 +1,500 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #181818;
+    color: #fff;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+}
+
+.logo span {
+    color: #B70E21;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper>* {
+    padding: 1em;
+}
+
+.contact-form {
+    background: #222222;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+
+.contact-form form button {
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+
+/* CONTACT INFO */
+
+.contact-info {
+    background: #000;
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+
+/* subir imagen */
+
+
+/* seleccion multiple */
+
+h2 {
+    margin: 16px;
+}
+
+.container {
+    margin-top: -60px;
+    padding: 32px;
+}
+
+.select-box {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+
+.select-box .options-container {
+    background: #2f3640;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+}
+
+.selected {
+    background: #2f3640;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    position: relative;
+    order: 0;
+}
+
+.selected::after {
+    content: "";
+    background: url("img/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+    transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container.active+.selected::after {
+    transform: rotateX(180deg);
+    top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.select-box .option:hover {
+    background: #414b57;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .radio {
+    display: none;
+}
+
+
+/* seleccion multiple 2 */
+
+h2 {
+    margin: 16px;
+}
+
+.container-2 {
+    margin-top: -60px;
+    padding: 32px;
+}
+
+.select-box-2 {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+
+.select-box-2 .options-container-2 {
+    background: #2f3640;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+}
+
+.selected2 {
+    background: #2f3640;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    position: relative;
+    order: 0;
+}
+
+.selected2::after {
+    content: "";
+    background: url("img/arrow-down.svg");
+    background-size: contain;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+    transition: all 0.4s;
+}
+
+.select-box-2 .options-container-2.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box-2 .options-container-2.active+.selected2::after {
+    transform: rotateX(180deg);
+    top: -6px;
+}
+
+.select-box-2 .options-container-2::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box-2 .options-container-2::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box-2 .option2,
+.selected2 {
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.select-box-2 .option2:hover {
+    background: #414b57;
+}
+
+.select-box-2 label {
+    cursor: pointer;
+}
+
+.select-box-2 .option2 .radio {
+    display: none;
+}
+
+
+/* seleccion multiple 3 */
+
+h2 {
+    margin: 16px;
+}
+
+.container-3 {
+    margin-top: -60px;
+    padding: 32px;
+}
+
+.select-box-3 {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+
+.select-box-3 .options-container-3 {
+    background: #2f3640;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+}
+
+.selected3 {
+    background: #2f3640;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    position: relative;
+    order: 0;
+}
+
+.selected3::after {
+    content: "";
+    background: url("img/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+    transition: all 0.4s;
+}
+
+.select-box-3 .options-container-3.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box-3 .options-container-3.active+.selected3::after {
+    transform: rotateX(180deg);
+    top: -6px;
+}
+
+.select-box-3 .options-container-3::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box-3 .options-container-3::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box-3 .option3,
+.selected3 {
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.select-box-3 .option3:hover {
+    background: #414b57;
+}
+
+.select-box-3 label {
+    cursor: pointer;
+}
+
+.select-box-3 .option3 .radio {
+    display: none;
+}
+
+
+/* Calendario */
+
+.cart_select {
+    color: #26a500;
+    padding-right: 20%;
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: 1px;
+}
+
+.cart_input {
+    background-color: #2AC176;
+}
+
+
+/* subir imagen */
+
+
+/* Estilo del área del input[file] */
+
+.drag-drop {
+    height: 8em;
+    width: 75em;
+    background-color: #ccc;
+    border-radius: 1em;
+    text-align: center;
+    color: white;
+    margin: 0 auto 3.5em;
+}
+
+.drag-drop span.desc {
+    display: block;
+    font-size: .7em;
+    padding: 0 .5em;
+    color: #000;
+}
+
+input[type="file"] {
+    height: 10em;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+
+/* Estilo del área del input[file] con :hover */
+
+.drag-drop:hover,
+input[type="file"]:hover {
+    background-color: #3276b1;
+    cursor: pointer;
+}
+
+.drag-drop:hover span.desc {
+    color: #fff;
+}
+
+.drag-drop:hover .pulsating {
+    animation: pulse1 1s linear infinite;
+    animation-direction: alternate;
+}
+
+
+/* Composición del icono de Upload con FontAwesome */
+
+.fa-stack {
+    margin-top: .5em;
+}
+
+.fa-stack .top {
+    color: white;
+}
+
+.fa-stack .medium {
+    color: black;
+    text-shadow: 0 0 .25em #666;
+}
+
+.fa-stack .bottom {
+    color: rgba(225, 225, 225, .75);
+}
+
+@keyframes pulse1 {
+    0% {
+        color: rgba(225, 225, 225, .75);
+    }
+    50% {
+        color: rgba(225, 225, 225, 0.25);
+    }
+    100% {
+        color: rgba(225, 225, 225, .75);
+    }
+}
+
+
+/* responcive*/
+
+@media(min-width: 700px) {
+    body {
+        padding: 0 4em;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper>* {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
