@@ -5,9 +5,26 @@
 }
 
 body{
-	background: #E0E4E5;
+	background-image: url('/IMG/fondobicicletas.jpg');
 	font-family: 'Open Sans', sans-serif;
 }
+.contenedorM {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+  }
+  .contenedor__mensaje {
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 95%;
+	height: 250px;
+  }
 
 .wrap{
 	max-width: 1100px;
@@ -16,7 +33,8 @@ body{
 }
 
 .wrap > h1{
-	color: #494B4D;
+	background-color: black;
+	color: white;
 	font-weight: 400;
 	display: flex;
 	flex-direction: column;
@@ -39,8 +57,8 @@ body{
 
 .category_list{
 	display: flex;
-	flex-direction: column;
-	width: 18%;
+	flex-direction: row;
+	width: 100%;
 }
 
 .category_list .category_item{
@@ -62,24 +80,15 @@ body{
 /* PRODUCTOS ============*/
 
 .products-list{
-	width: 82%;
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: center;
 }
 
 
 .products-list .product-item{
-	width: 22%;
-	margin-left: 3%;
-	margin-bottom: 25px;
-	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-self: flex-start;
-
+	width: 40%;
 	transition: all .4s;
+	margin: 1%;	
 }
 
 .products-list .product-item img{

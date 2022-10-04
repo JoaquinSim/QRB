@@ -1,13 +1,18 @@
 const express = require('express');
-const { mostrarBicicleta, agregarBicicleta, editarBicicleta } = require('../Controllers/bicicleta.controller');
+const { agregarBicicleta, listar, enviar, traer, eliminar, actualizar } = require('../Controllers/bicicleta.controller');
 
 const router = express.Router();
 
-router.get('/bicicleta/agregar', agregarBicicleta)
+router.get('/bicicleta/agregar/:id', agregarBicicleta)
 
-router.get('/bicicleta/listar', mostrarBicicleta)
+router.post("/bicicleta/agregar/:id", enviar)
 
-router.get('/bicicleta/editar', editarBicicleta)
+router.get('/bicicleta/listar/:id', listar)
 
+router.get("/bicicleta/editar/:id", traer)
+
+router.post("/bicicleta/editar/:id", actualizar)
+
+router.get("/bicicleta/eliminar/:id", eliminar)
 
 module.exports = router

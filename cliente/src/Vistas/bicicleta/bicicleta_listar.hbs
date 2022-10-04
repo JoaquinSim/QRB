@@ -1,36 +1,33 @@
 <link rel="stylesheet" href="/CSS/lista-bicicletas.css" />
-<form action="/bicicleta/listar" method="GET"></form>
- <div class="wrap">
-        <h1>BICICLETAS PERDIDAS O ROBADAS</h1>
-        <div class="store-wrapper">
-            <div class="category_list">
-                <a href="#" class="category_item" category="all">Todo</a>
-                <a href="#" class="category_item" category="ordenadores">Perdidas</a>
-                <a href="#" class="category_item" category="laptops">Robadas</a>
+<form action="/bicicleta/listar/{{user.id_cliente}}" method="GET"></form>
+<div class="wrap">
+    <h1>BICICLETAS PERDIDAS O ROBADAS</h1>
+    <div class="store-wrapper">
+        <div class="category_list">
+            <a href="#" class="category_item" category="all">Todo</a>
+            <a href="#" class="category_item" category="perdida">Perdidas</a>
+            <a href="#" class="category_item" category="robada">Robadas</a>
+            <a href="/bicicleta/agregar/{{user.id_cliente}}" class="category_item" >Añadir Bicicleta</a>
 
+        </div>
+        {{#each lista}}
+        <section class="products-list">
+            <div class="product-item" category="{{estado_bicicleta}}">
+                <a href="/bicicleta/editar/{{id_bicicleta}}">
+                <img src="/IMG/bicicleta/{{imagen_bicicleta}}" alt="">
+                </a>
             </div>
-            <section class="products-list">
-                <div class="product-item" category="laptops">
-                    <img src="images/group1.png" alt="">
-                    <a href="#">biciccleta</a>
-                </div>
-                <div class="product-item" category="laptops">
-                    <img src="images/group2.png" alt="">
-                    <a href="#">bicicleta</a>
-                </div>
-
-
-                <div class="product-item" category="ordenadores">
-                    <img href="" src="images/img2.jpeg" alt="">
-                    <a href="#">Estado: Perdida</a>
-                    <a>Marca: Ger</a>
-                </div>
-                <div class="product-item" category="ordenadores">
-                    <img src="images/img3.png" alt="">
-                    <a href="#">bcicicleta</a>
-                </div>
-
-
-            </section>
+        </section>
+        {{else}}
+        <div class="contenedorM" id="main">
+            <div class="contenedor__mensaje">
+                <p>No existen bicicletas registradas</p>
+                <p>¿Agregar una bicicleta?</p>
+                <a href="/bicicleta/agregar/{{user.id_cliente}}"><button
+                        class="grupo-boton "><b>Agregar</b></button></a>
+            </div>
         </div>
     </div>
+
+</div>
+{{/each}}

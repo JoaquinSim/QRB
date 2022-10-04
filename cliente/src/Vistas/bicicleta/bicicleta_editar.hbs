@@ -1,2 +1,162 @@
-<link rel="stylesheet" href="" />
-<form action="/bicicleta/editar" method="POST"></form>
+<link rel="stylesheet" href="/CSS/bicicleta.css">
+
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+{{#each lista}}
+<form action="/bicicleta/editar/{{id_bicicleta}}" method="POST" class="formagregar" id="main" ref="uploadForm"
+    encType="multipart/form-data">
+    <div class="content">
+        <div>
+
+            <input type="text" name="id_bicicleta" id="numero" readonly value="{{'max(id_bicicleta)'}}"
+                style="display:none;">{{/each}}
+            <!--{{#each maxt}}
+            <input type="text" name="id_perdidaRobada" id="numero1" readonly
+                value="{{'max(id_perdidaRobada)'}}">{{/each}}
+            {{#each maxd}}
+            <input type="text" name="id_rin" id="numero2" readonly value="{{'max(id_rin)'}}">{{/each}}-->
+        </div>
+        <div class="contact-wrapper ">
+            <h1 class="logo">Editar<span>Perdidas y Robadas</span></h1>
+            <br><br>
+            <div class="contact-form">
+                <div class="container" required>
+                    <div class="imganbic" style="display: flex; flex-direction:column; align-items:center;">
+                        {{#each lista}} <img style="width: 280px;" src="/IMG/bicicleta/{{imagen_bicicleta}}"
+                            alt="">{{/each }}
+                        <div class="drag-drop">
+                            <input type="file" multiple="multiple" id="photo" name="imagen_bicicleta" />
+                            <span class="fa-stack fa-2  x">
+                                <i class="fa fa-cloud fa-stack-2x bottom pulsating"></i>
+                                <i class="fa fa-circle fa-stack-1x top medium"></i>
+                                <i class="fa fa-arrow-circle-up fa-stack-1x top"></i>
+                            </span>
+                            <span class="desc">Pulse aquí para añadir archivos</span>
+                        </div><br>
+                    </div>
+                    {{#each lista}}
+                    <div class="bici-inf">
+                        <div class="select-box" required>
+                            <h4>Estado de la Bicicleta</h4>
+                            <div class="options-container" required>
+                                <select name="estado_bicicleta" class="select">
+
+                                    <option value="Perdida">
+                                        <label for="perdida">->Perdida</label>
+                                    </option>
+                                    <option value="Robada">
+                                        <label for="perdida">->Robada</label>
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="selected" required>
+                                {{estado_bicicleta}}
+                            </div>
+                        </div>
+                        <div class="container-2" required>
+                            <h4>Marca de la Bicicleta</h4>
+                            <div class="select-box-2">
+                                <div class="options-container-2" required>
+                                    <select name="marca_bicicleta" id="" class="select">
+                                        <option value="Trek">Trek</option>
+                                        <option value="Ger">Ger</option>
+                                        <option value="Giant">Giant</option>
+                                        <option value="Orbea">Orbea</option>
+                                        <option value="Specialized">Specialized</option>
+                                        <option value="Marin" id="">Marin</option>
+                                    </select>
+                                </div>
+
+                                <div class="selected2" required>
+                                    {{marca_bicicleta}}
+                                </div>
+                            </div>
+                        </div>
+                        {{/each }}
+                        {{#each tipc}}
+                        <div class="container-3">
+                            <h4>Rin de la Bicicleta</h4>
+                            <div class="select-box-3">
+                                <div class="options-container-3">
+                                    <select name="nombre_rin" id="" class="select">
+                                        <option value="20">20</option>
+                                        <option value="24">24</option>
+                                        <option value="26">26</option>
+                                        <option value="27.5">27.5</option>
+                                        <option value="29">29</option>
+                                    </select>
+                                </div>
+                                <div class="selected3">
+                                    {{nombre_rin}}
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div><br><br><br>
+                <!--seleccion marca-->
+                <div class="formulario">
+
+                    <!--datos-->
+                    {{#each lista}}
+
+                    <p>
+                        <label>Color Principal</label>
+                        <input type="text" name="colorPrimario_bicicleta" value="{{colorPrimario_bicicleta}}">
+                    </p>
+
+                    <p>
+                        <label>Color Secundario</label>
+                        <input type="text" name="colorSecundario_bicicleta" value="{{colorSecundario_bicicleta}}">
+                    </p>
+                    <!--aro de bici-->
+
+                    <!--datos-->
+                    <p>
+                        <label>Número de Serie de la Bicicleta</label>
+                        <input type="text" name="codigo_bicicleta" value="{{codigo_bicicleta}}">
+                    </p>
+                    {{/each}}
+                    {{#each listaDetalleGrupo}}
+                    <!--datos-->
+                    <p>
+                        <label>Lugar de Perdida o Robo (Dirección)</label>
+                        <input type="text" name="lugarPerdida_perdidaRobada">
+                    </p>
+                    <!--fecha de perdida o robada-->
+                    <fieldset class="block">
+                        <h4> &#x1F4C6; Fecha de Robo o Perdida</4>
+                            <input type="date" name="" id="" value="{{fecha_perdida_perdidaRobada}}">
+                    </fieldset>
+                    <br>
+                    <br>
+                    {{/each}}
+                    {{#each lista}}
+                    <p class="block">
+                        <label>Descripción de la Bicicleta</label>
+                        <textarea name="descripcion_bicicleta" rows="3">{{descripcion_bicicleta}}</textarea>
+                    </p>
+                    {{/each}}
+                    {{#each lista}}
+                    <p class="block">
+                    <div>
+                        <a href="/bicicleta/listar/{{user.id_cliente}}">Regresar</a>
+                        <a href="/bicicleta/eliminar/{{id_bicicleta}}"
+                            style="margin: 0 100px;color:red; font-size:18px;">Eliminar</a>
+                    </div>
+                    <button type="submit"> Guardar</button>
+                    </p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
