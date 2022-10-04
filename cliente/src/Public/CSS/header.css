@@ -119,7 +119,7 @@
   list-style: none;
   width: 150px;
   text-align: center;
-  margin-left: -35px;
+    margin-left: -35px;
   margin-top: 10px;
   transition: .4s;
 }

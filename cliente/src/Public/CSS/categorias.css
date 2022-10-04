@@ -1,5 +1,8 @@
 /*Efecto para imagenes*/
-
+body{
+    background-image: url('/IMG/fondoinicio.jpg');
+    background-size: cover;
+}
 .galeria-port {
     display: flex;
     justify-content: space-evenly;
