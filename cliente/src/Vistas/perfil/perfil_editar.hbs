@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="/CSS/registro.css">
+<div id="contenedor">
+    {{#each maxc}}<input type="text" name="id_detalleCliente" id="numero" value="{{id_detalleCliente}}" style="display: none;">{{/each}}
+     {{#each maxt}} <input type="text" name="id_tipoCiclismo" id="numero1" value="{{id_tipoCiclismo}}" style="display: none;">{{/each}}
+                 {{#each usuarios}}
+<form action="/perfil/perfil_editar/{{user.id_cliente}}" method="POST">
+    <div class="nombre_Quitus">
+        <h3 class="nombre_Quitus_h3">Actualiza tu perfil</h3>
+        <p class="nombre_Quitus_p">¡Y vamos a Ciclear!</p>
+      </div>
+      <div class="indicaciones_Registro">
+        <p class="indicaciones_Registro_p">Ingresa datos reales<br />
+          Los datos con * son obligatorios</p>
+      </div>
+      <div class="formulario_datos_basicos">
+        <div class="formulario_datos_basicos_11">
+          <div class="formulario_datos_basicos_1">
+
+            <input
+              type="text"
+              name="nombreCompleto_cliente"
+              id="nombreCompleto_cliente"
+              placeholder="*Ingresa tus dos nombres y dos apellidos"
+              class="input"
+              value="{{nombreCompleto_cliente}}"
+              style="color:burlywood ;"
+            />
+            <div class="">
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="*Ingrese su apodo"
+                class="input"
+                value="{{username_cliente}}"
+                 style="color:burlywood ;"
+              />
+              <input type="text" name="celular_cliente" id="celular_cliente" placeholder="Número Celular" class="input">
+            </div>
+            <div>
+              <input
+                type="text"
+                name="correo_cliente"
+                id="correo_cliente"
+                placeholder="Correo Electrónico"
+                class="input"
+                value="{{correo_cliente}}"
+                 style="color:burlywood ;"
+              />
+            </div>
+            <div class="contrasenias">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="*Actualize contraseña"
+                class="input"
+              />
+            </div>
+          </div>
+          <div class="Registro_foto">
+            <input
+              style="display:none"
+              type="file"
+              name="foto_cliente"
+              id="foto_cliente"
+            />
+            <p class="Registro_foto_p">Sube tu foto</p>
+            <img src="/IMG/cliente/{{imagen_cliente}}" id="Registro_foto_img" />
+            <input type="file" name="foto_cliente" id="foto_cliente" />
+          </div>
+          <!-- <div class="Registro_Identificacion">
+             <p id="Registro_Identificacion_parrafo">¿Ecuatoriano? selecciona cédula, caso contrario escoge pasaporte.</p>
+             <select name="" id="Registro_Identificacion_parrafo_select">
+                 <option value="Cedula">Cédula</option>
+                 <option value="Pasaporte">Pasaporte</option>
+                 <option value="noc" selected hidden>Identificación</option>
+             </select>
+             <div>
+                <input type="text" name="identificacion_cliente" id="identificacion_cliente" placeholder="Cédula">
+            </div>
+        </div>-->
+        </div>
+      </div>
+      <div class="Registro_foto_ubicacion">
+        <div class="Registro_nacimiento">
+          <p class="Registro_nacimiento_p">*¿Cuándo Naciste?</p>
+          <input
+            type="date"
+            name="fechaNacimiento_cliente"
+            id="fechaNacimiento_cliente"
+            value="{{fechaNacimiento_cliente}}"
+             style="color:burlywood ;"
+          />
+        </div>
+        {{/each}}
+        
+        <div class="Registro_disciplina">
+          <p>¿Qué tipo de ciclismo vas a practicar?</p>
+          <select name="nombre_tipoCiclismo">
+            <option value="disciplina1">BMX</option>
+            <option value="disciplina1">Ciclopaseo</option>
+            <option value="disciplina1">Montañismo</option>
+            <option value="disciplina1">Ciclismo de ruta</option>
+            <option value="disciplina1">Ciclismo habitual</option>
+            <option value="disciplina1">Carrera</option>
+            <option value="noc" selected hidden>Disciplina</option>
+          </select>
+        </div>
+      </div>
+      <!--<div class="Registro_ubicacion">
+                <p class="Registro_ubicacion_p">¿Dónde Vives?</p>
+                <input type="text" name="pais_ubicacionCliente" id="pais_ubicacionCliente" placeholder="País">
+                <input type="text" name="ciudad_ubicacionCliente" id="ciudad_ubicacionCliente" placeholder="Ciudad">
+                <input type="text" name="barrio_cliente" id="barrio_cliente" placeholder="Barrio">
+            </div>-->
+
+      <div class="botones">
+        <div>
+          <input type="checkbox" name="" id="checkbox" />
+          <small>*Acepto los términos de uso y la Política de privacidad de
+            Quitus RideBike"</small>
+        </div>
+        <div>
+          <button type="submit" onclick="" id="Registrarse">Actualizar</button>
+        </div>
+        <div>
+          <a href="/inicio"> Regresar al inicio</a>
+        </div>
+        <div>
+          <a href="/perfil/eliminar/{{user.id_cliente}}" style="color: red;"> Eliminar mi cuenta</a>
+        </div>
+      </div>
+</form>
+
+</div>

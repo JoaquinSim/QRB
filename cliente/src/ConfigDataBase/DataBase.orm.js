@@ -107,8 +107,8 @@ tiposCiclismo.belongsTo(detalleGrupos)
 
 
 //tipoCiclismo-detalleCliente
-tiposCiclismo.hasMany(detalle_cliente)
-detalle_cliente.belongsTo(tiposCiclismo)
+tiposCiclismo.belongsTo(detalle_cliente)
+detalle_cliente.hasMany(tiposCiclismo)
 
 //COMENTARIOS
 //bicleta-comentario
