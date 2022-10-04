@@ -1,29 +1,67 @@
-<link rel="stylesheet" href="/CSS/registro.css">
+<link rel="stylesheet" href="/CSS/registro.css" />
 <body>
-    
-<div id="contenedor">
+
+  <div id="contenedor">
     <form action="/registro" method="POST">
-        <div class="nombre_Quitus">
-            <h3 class="nombre_Quitus_h3">Crea tu cuenta</h3>
-            <p class="nombre_Quitus_p">¡Y vamos a Ciclear!</p>
-        </div>
-         <div class="indicaciones_Registro">
-              <p class="indicaciones_Registro_p">Ingresa datos reales<br> 
-              Los datos con * son obligatorios</p>
-         </div>    
-        <div class="formulario_datos_basicos">
-            <div class="formulario_datos_basicos_11">
-            <div class="formulario_datos_basicos_1">
-                <input type="text" name="nombreCompleto_cliente" id="nombreCompleto_cliente" placeholder="*Ingresa tus dos nombres y dos apellidos">    
-                <div class="formulario_datos_basicos_1_1">
-                    <input type="text" name="username" id="username" placeholder="Apodo">
-                    <input type="text" name="celular_cliente" id="celular_cliente" placeholder="Número Celular">
-                </div>
-                <div>
-                    <input type="text" name="correo_cliente" id="correo_cliente" placeholder="Correo Electrónico">
-                </div>
+      <div class="nombre_Quitus">
+        <h3 class="nombre_Quitus_h3">Crea tu cuenta</h3>
+        <p class="nombre_Quitus_p">¡Y vamos a Ciclear!</p>
+      </div>
+      <div class="indicaciones_Registro">
+        <p class="indicaciones_Registro_p">Ingresa datos reales<br />
+          Los datos con * son obligatorios</p>
+      </div>
+      <div class="formulario_datos_basicos">
+        <div class="formulario_datos_basicos_11">
+          <div class="formulario_datos_basicos_1">
+            <input
+              type="text"
+              name="nombreCompleto_cliente"
+              id="nombreCompleto_cliente"
+              placeholder="*Ingresa tus dos nombres y dos apellidos"
+              class="input"
+            />
+            <div class="">
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="*Ingrese su apodo"
+                class="input"
+              />
+              <!--<input type="text" name="celular_cliente" id="celular_cliente" placeholder="Número Celular">-->
             </div>
-        <div class="Registro_Identificacion">
+            <div>
+              <input
+                type="text"
+                name="correo_cliente"
+                id="correo_cliente"
+                placeholder="Correo Electrónico"
+                class="input"
+              />
+            </div>
+            <div class="contrasenias">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="*Ingrese su contraseña"
+                class="input"
+              />
+            </div>
+          </div><!--
+          <div class="Registro_foto">
+            <input
+              style="display:none"
+              type="file"
+              name="foto_cliente"
+              id="foto_cliente"
+            />
+            <p class="Registro_foto_p">Sube tu foto</p>
+            <img src="/IMG/usuario.png" id="Registro_foto_img" />
+            <input type="file" name="foto_cliente" id="foto_cliente" />
+          </div>-->
+          <!-- <div class="Registro_Identificacion">
              <p id="Registro_Identificacion_parrafo">¿Ecuatoriano? selecciona cédula, caso contrario escoge pasaporte.</p>
              <select name="" id="Registro_Identificacion_parrafo_select">
                  <option value="Cedula">Cédula</option>
@@ -33,58 +71,56 @@
              <div>
                 <input type="text" name="identificacion_cliente" id="identificacion_cliente" placeholder="Cédula">
             </div>
+        </div>-->
         </div>
-        </div>
-        </div>
-        <div class="contrasenias">
-                <input type="text" name="password" id="password" placeholder="Contraseña">
-                <input type="text" name="" id="password2" placeholder="Confirmar Contraseña">
-        </div>
-
-        <div class="Registro_foto_ubicacion">
-            <div class="Registro_nacimiento">
-                <p class="Registro_nacimiento_p">*¿Cuándo Naciste?</p>
-                <input type="text" name="fechaNacimiento_cliente" id="fechaNacimiento_cliente" placeholder="00/00/0000">
-            </div>
-
-            <div class="Registro_foto">
-                <input style="display:none" type="file" name="foto_cliente" id="foto_cliente">
-                <p class="Registro_foto_p">Sube tu foto</p>
-                    <img src="/IMG/usuario.png" id="Registro_foto_img">
-            </div>
+      </div>
+      <div class="Registro_foto_ubicacion">
+        <div class="Registro_nacimiento">
+          <p class="Registro_nacimiento_p">*¿Cuándo Naciste?</p>
+          <input
+            type="date"
+            name="fechaNacimiento_cliente"
+            id="fechaNacimiento_cliente"
+            placeholder="00/00/0000"
+          />
+        </div><!--
         <div class="Registro_disciplina">
-             <p>¿Qué tipo de ciclismo vas a practicar?</p>
-             <select name="">
-                 <option value="disciplina1">BMX</option>
-                 <option value="disciplina1">disciplina2</option>
-                 <option value="noc" selected hidden>Disciplina</option>
-             </select>
-        </div>            
-        </div>
-            <div class="Registro_ubicacion">
+          <p>¿Qué tipo de ciclismo vas a practicar?</p>
+          <select name="">
+            <option value="disciplina1">BMX</option>
+            <option value="disciplina1">Ciclopaseo</option>
+            <option value="disciplina1">Montañismo</option>
+            <option value="disciplina1">Ciclismo de ruta</option>
+            <option value="disciplina1">Ciclismo habitual</option>
+            <option value="disciplina1">Carrera</option>
+            <option value="noc" selected hidden>Disciplina</option>
+          </select>
+        </div>-->
+      </div>
+      <!--<div class="Registro_ubicacion">
                 <p class="Registro_ubicacion_p">¿Dónde Vives?</p>
                 <input type="text" name="pais_ubicacionCliente" id="pais_ubicacionCliente" placeholder="País">
                 <input type="text" name="ciudad_ubicacionCliente" id="ciudad_ubicacionCliente" placeholder="Ciudad">
                 <input type="text" name="barrio_cliente" id="barrio_cliente" placeholder="Barrio">
-            </div>
-    
-        <div class="botones">
-            <div>
-                <input type="checkbox" name="" id="checkbox">
-                 <small>*Acepto los términos de uso y la Política de privacidad de Quitus RideBike"</small> 
-            </div>            
-            <div>
-                <button type="submit" onclick="" id="Registrarse">Registrarme</button>
-            </div>
-            <div>
-                <a href="/Login">¿Ya tienes una cuenta?<br> Inicia Sesión</a> 
-            </div>
+            </div>-->
 
+      <div class="botones">
+        <div>
+          <input type="checkbox" name="" id="checkbox" />
+          <small>*Acepto los términos de uso y la Política de privacidad de
+            Quitus RideBike"</small>
         </div>
-    </form>
-</div>
-</body>
+        <div>
+          <button type="submit" onclick="" id="Registrarse">Registrarme</button>
+        </div>
+        <div>
+          <a href="/Login">¿Ya tienes una cuenta?<br /> Inicia Sesión</a>
+        </div>
 
+      </div>
+    </form>
+  </div>
+</body>
 
 <!-- Selección fecha de nacimiento
                  <ol name="">

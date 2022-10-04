@@ -23,10 +23,11 @@ loginCTL.mostrarRegistro = async(req, res) => {
 
 
 loginCTL.registro = passport.authenticate('local.signup', {
-    successRedirect: '/cerrasesion',
+    successRedirect: '/cerrarsesion',
     failureRedirect: '/registro',
     failureFlash: true
 })
+
 
 loginCTL.cerrarsesion = (req, res, next) => {
     req.logout(function(err) {

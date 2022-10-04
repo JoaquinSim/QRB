@@ -62,11 +62,10 @@ passport.use(
           id_cliente,
           nombreCompleto_cliente,
           correo_cliente,
-          identificacion_cliente,
           fechaNacimiento_cliente,
           foto_cliente,
-          celular_cliente,
           estado_cliente,
+          username
         } = req.body;
         let nuevoUsuario = {
           id_cliente: id_cliente,
@@ -74,11 +73,9 @@ passport.use(
           correo_cliente,
           username_cliente: username,
           clave_cliente: password,
-          identificacion_cliente,
           fechaNacimiento_cliente,
           foto_cliente,
-          celular_cliente,
-          estado_cliente,
+          estado_cliente:1,
         };
         nuevoUsuario.clave_cliente = await helpers.encryptPassword(password);
         const resultado = await orm.cliente.create(nuevoUsuario);
@@ -98,22 +95,20 @@ passport.use(
             const {
               nombreCompleto_cliente,
               correo_cliente,
-              identificacion_cliente,
               fechaNacimiento_cliente,
               foto_cliente,
-              celular_cliente,
               estado_cliente,
+              username,
+              password
             } = req.body;
             let nuevoUsuario = {
               nombreCompleto_cliente,
               correo_cliente,
               username_cliente: username,
               clave_cliente: password,
-              identificacion_cliente,
               fechaNacimiento_cliente,
               foto_cliente,
-              celular_cliente,
-              estado_cliente,
+              estado_cliente:1,
             };
 
             nuevoUsuario.clave_cliente = await helpers.encryptPassword(

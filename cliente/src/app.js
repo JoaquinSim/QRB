@@ -72,6 +72,6 @@ app.use(require('./Rutas/bicicleta.rutas'))
 
 app.use(require('./Rutas/grupo.rutas'))
 
-
+app.use(require('./Rutas/perfil.rutas'))
 
 module.exports = app
